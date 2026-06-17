@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "title": "STAY HEAVEN — Your cozy Seoul base",
+    "description": "STAY HEAVEN is a small, English-friendly guesthouse near Central Station in central Seoul. Private rooms, self check-in, and long stays welcome — minutes to Seongsu, Dongdaemun, Jongno, and Myeongdong.",
+    "keywords": "STAY HEAVEN, Seoul hostel, Seoul guesthouse, hostel in Seoul, English-friendly hostel Seoul, long stay Seoul, monthly stay Seoul, Korean guesthouse",
+    "ogImageAlt": "STAY HEAVEN — English-friendly Seoul guesthouse"
+  },
+  "nav": {
+    "about": "About",
+    "rooms": "Rooms",
+    "longStay": "Long Stay",
+    "facilities": "Facilities",
+    "location": "Location",
+    "guestNotes": "Guest Notes",
+    "book": "Book"
+  },
+  "hero": {
+    "eyebrow": "STAY HEAVEN · SEOUL",
+    "title": "A cozy base for your days in Seoul.",
+    "subtitle": "Soft, warm, and thoughtfully cared for. Stay a night, or stay a while.",
+    "cta": "Request a Long Stay"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Run by travelers, for travelers.",
+    "body": "STAY HEAVEN is a small, internationally friendly stay in the heart of Seoul. We keep things simple and kind — clean rooms, quiet mornings, and an easy, self-guided rhythm. We truly enjoy what we do, and we care deeply about every guest who walks through our doors. More than anything, we hope STAY HEAVEN feels like a place you can feel at ease, just like home.",
+    "points": [
+      { "title": "A stay made with care", "body": "We pay attention to the little things that make your stay comfortable." },
+      { "title": "Thoughtfully made, simply run", "body": "We all love traveling, and we understand the joy it brings. We try to share that same feeling with every guest who stays with us." },
+      { "title": "A place to feel at ease", "body": "We hope you feel relaxed, comfortable, and truly welcomed here." }
+    ]
+  },
+  "rooms": {
+    "eyebrow": "Rooms",
+    "title": "Not too much, not too little.",
+    "subtitle": "Our rooms are compact, but thoughtfully arranged with the essentials for a comfortable stay. We keep things simple, practical, and reasonably priced, so you can enjoy Seoul without paying for more than you need.",
+    "viewDetails": "View details",
+    "close": "Close",
+    "size": "Size",
+    "capacityLabel": "Capacity",
+    "bedsLabel": "Bed Configuration",
+    "amenitiesLabel": "Amenities",
+    "rateLabel": "Room Rate",
+    "priceFrom": "From {price} / night",
+    "rateRows": {
+      "weekday": "Mon–Thu",
+      "fri": "Fri",
+      "sat": "Sat"
+    },
+    "slide": "Slide {current} of {total}",
+    "prev": "Previous image",
+    "next": "Next image",
+    "items": [
+      {
+        "slug": "double",
+        "name": "Double Room",
+        "capacity": "2 guests",
+        "size": "14 m²",
+        "beds": "1 Double Bed (1,300 × 2,000 mm)",
+        "desc": "A compact, comfortable room with a soft double bed and warm lighting.",
+        "amenities": ["Free Wi-Fi", "Flat-screen TV", "Air Conditioning", "Private Bathroom", "Hair Dryer"],
+        "priceFrom": "₩70,000",
+        "rates": {
+          "weekday": "₩70,000",
+          "fri": "₩140,000",
+          "sat": "₩160,000"
+        },
+        "images": [
+          "/images/double-1.jpg",
+          "/images/double-2.jpg",
+          "/images/double-3.jpg",
+          "/images/double-4.jpg",
+          "/images/double-5.jpg",
+          "/images/double-6.jpg",
+          "/images/double-7.jpg"
+        ]
+      },
+      {
+        "slug": "twin",
+        "name": "Twin Room",
+        "capacity": "2 guests",
+        "size": "15 m²",
+        "beds": "2 Single Beds (900 × 2,000 mm each)",
+        "desc": "Two single beds for friends or family traveling together.",
+        "amenities": ["Free Wi-Fi", "Flat-screen TV", "Air Conditioning", "Private Bathroom", "Hair Dryer"],
+        "priceFrom": "₩80,000",
+        "rates": {
+          "weekday": "₩80,000",
+          "fri": "₩150,000",
+          "sat": "₩170,000"
+        },
+        "images": [
+          "/images/twin-1.jpg",
+          "/images/twin-2.jpg",
+          "/images/twin-3.jpg",
+          "/images/twin-4.jpg",
+          "/images/twin-5.jpg",
+          "/images/twin-6.jpg"
+        ]
+      }
+    ]
+  },
+  "longStay": {
+    "eyebrow": "Long Stay",
+    "title": "Planning to stay 10 nights or more?",
+    "body": "Reach out to us directly and we'll do our best to prepare better rates and a longer, smoother stay. After you send your inquiry, we'll check availability and reply with a personal payment link.",
+    "bullets": [
+      "Stay 10+ nights and enjoy 1 extra night free or a free airport taxi pickup",
+      "Complimentary room cleaning once every 3 days",
+      "A calm neighborhood with easy access to the rest of Seoul",
+      "Thoughtful, personal support throughout your stay"
+    ],
+    "cta": "Request a Long Stay",
+    "note": "You'll be taken to a short Google Form (opens in a new tab).",
+    "process": {
+      "heading": "Long Stay Reservation Process",
+      "steps": [
+        "Submit Google Form",
+        "Availability check",
+        "Payment link sent",
+        "Guest payment",
+        "Reservation confirmed"
+      ],
+      "disclaimer": "Submitting the form does not confirm your booking.\nWe will first check availability, and if your requested dates are available, we will send you a personal payment link by email.\nYour reservation is confirmed only after payment is completed."
+    }
+  },
+  "facilities": {
+    "eyebrow": "Facilities",
+    "title": "The essentials, done well.",
+    "items": [
+      { "name": "Lounge", "desc": "A shared space to relax or work." },
+      { "name": "Washing & Drying Machine", "desc": "Wash and dry in one easy cycle." },
+      { "name": "Water Dispenser", "desc": "Cold and hot water, anytime." },
+      { "name": "Microwave", "desc": "For quick meals and late snacks." },
+      { "name": "Free Luggage Storage", "desc": "Available before check-in and after check-out." },
+      { "name": "Comfort Essentials", "desc": "Extra towels and toilet paper are available on each floor." }
+    ]
+  },
+  "location": {
+    "eyebrow": "Location",
+    "title": "Central — quiet, yet close to everything.",
+    "body": "STAY HEAVEN sits a short walk from Central Station, a major transit point connecting you across Seoul in minutes.",
+    "access": [
+      { "place": "Seongsu", "time": "5 min" },
+      { "place": "Dongdaemun", "time": "10 min" },
+      { "place": "Jongno / Gwanghwamun", "time": "15 min" },
+      { "place": "Myeongdong", "time": "15 min" },
+      { "place": "Hongdae", "time": "25 min" }
+    ],
+    "nearby": "Around the stay you'll find convenience stores, Olive Young, Daiso, and local supermarkets — everything for daily life.",
+    "mapLinks": {
+      "google": "Google Maps",
+      "naver": "Naver Map"
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions guests often ask.",
+    "items": [
+      {
+        "q": "Can I check in late at night?",
+        "a": "Yes, you can. From 9:00 PM, when the front desk closes, until 3:00 AM the next day, check-in is available through our contactless check-in support system. No worries — we'll make sure you can check in smoothly."
+      },
+      {
+        "q": "Do you offer discounts for long stays?",
+        "a": "We welcome stays of 10 nights or more. Please send a direct inquiry through our Long Stay form and we'll reply with a personalized rate."
+      },
+      {
+        "q": "Where exactly is STAY HEAVEN located?",
+        "a": "We're in central Seoul, a few minutes from Central Station — a major transit hub connecting most of the city in 15 minutes."
+      },
+      {
+        "q": "How does payment work for direct inquiries?",
+        "a": "After we confirm availability, we send a personal payment link by email. You only pay once we've confirmed your dates."
+      },
+      {
+        "q": "What languages do you support?",
+        "a": "English, Japanese, Chinese and Korean. Please feel free to message us in any of these languages."
+      },
+      {
+        "q": "When is free luggage storage available?",
+        "a": "We offer free luggage storage both before check-in and after check-out.\n\nBefore check-in: You may leave your luggage at the front desk, and once your room is ready after cleaning, we will place it in your room for you.\n\nAfter check-out: Luggage storage is available until 1 hour before the front desk closes.\nMonday to Saturday: until 8:00 PM\nSunday: until 6:00 PM"
+      }
+    ]
+  },
+  "guestNotes": {
+    "eyebrow": "Guest Notes",
+    "title": "A few words from past guests.",
+    "items": [
+      { "quote": "Quiet, clean, and so easy to check in late. Felt like a calm home in Seoul.", "author": "Guest from Japan" },
+      { "quote": "Great location for exploring the city. The host was thoughtful and kind.", "author": "Guest from Taiwan" },
+      { "quote": "We stayed for three weeks and never wanted to leave. Highly recommend.", "author": "Guest from France" }
+    ]
+  },
+  "booking": {
+    "eyebrow": "Book",
+    "title": "Ready when you are.",
+    "body": "For long stays (10+ nights), please inquire directly — we'll reply with availability and a personal payment link. For shorter stays, booking through our OTA partners is easiest.",
+    "longStayCta": "Long Stay Inquiry",
+    "shortStay": "Short stay — book via",
+    "contact": "Contact",
+    "email": "hello@example.com",
+    "instagram": "Instagram",
+    "booking": "Booking.com",
+    "agoda": "Agoda",
+    "trip": "Trip.com"
+  },
+  "floating": {
+    "cta": "Long Stay Inquiry"
+  },
+  "footer": {
+    "tagline": "STAY HEAVEN · Seoul",
+    "rights": "All rights reserved.",
+    "credit": "Crafted by",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "business": {
+      "heading": "Business Information",
+      "name": { "label": "Business Name", "value": "STAY HEAVEN" },
+      "registration": { "label": "Business Registration Number", "value": "000-00-00000" },
+      "representative": { "label": "Representative", "value": "Hong Gil-dong" },
+      "address": { "label": "Business Address", "value": "00, Example-ro, Jung-gu, Seoul" },
+      "phone": { "label": "Phone Number", "value": "+82-2-0000-0000" }
+    }
+  }
+}

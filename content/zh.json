@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "title": "STAY HEAVEN — Your cozy Seoul base",
+    "description": "STAY HEAVEN（舒适天堂）位于首尔市中心中央站步行可达的小型多语言民宿。欢迎长期入住，提供中文沟通，干净安静的客房。前往圣水、东大门、钟路均十分便利。",
+    "keywords": "STAY HEAVEN, 舒适天堂, 首尔民宿, 首尔青年旅舍, Seoul hostel, 首尔长租, 韩国民宿",
+    "ogImageAlt": "舒适天堂 — 多语言接待的首尔民宿"
+  },
+  "nav": {
+    "about": "关于",
+    "rooms": "客房",
+    "longStay": "长期入住",
+    "facilities": "设施",
+    "location": "位置",
+    "guestNotes": "入住须知",
+    "book": "预订"
+  },
+  "hero": {
+    "eyebrow": "STAY HEAVEN · SEOUL",
+    "title": "首尔日常里,一处舒心的据点。",
+    "subtitle": "柔和、温暖、用心照料。住一晚,或住一段时间。",
+    "cta": "咨询长期入住"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "旅行者为旅行者打造的小宿。",
+    "body": "舒适天堂 位于首尔中心,是一家对国际旅客友好的小型住宿。我们把事情做得简单而用心 — 干净的房间、安静的清晨,以及自在的自助入住节奏。我们真心喜欢这份工作,也认真对待每一位走进门的客人。更重要的是,希望 舒适天堂 能像家一样,让您安心、自在。",
+    "points": [
+      { "title": "用心打理的住宿", "body": "我们关注细节,希望您在此停留期间都舒适自在。" },
+      { "title": "认真经营,简单营运", "body": "我们都热爱旅行,明白旅行带来的喜悦。我们希望把同样的心情,分享给每一位入住的旅人。" },
+      { "title": "可以安心的空间", "body": "希望您在这里感到放松、舒适,并真正被温暖地接待。" }
+    ]
+  },
+  "rooms": {
+    "eyebrow": "Rooms",
+    "title": "不多不少,刚刚好。",
+    "subtitle": "我们的客房紧凑,却经过细致安排,配齐了舒适入住所需的基本物件。保持简单、实用、价格合理,让您可以尽情享受首尔,而不必为多余的东西买单。",
+    "viewDetails": "查看详情",
+    "close": "关闭",
+    "size": "面积",
+    "capacityLabel": "入住人数",
+    "bedsLabel": "床铺配置",
+    "amenitiesLabel": "设施",
+    "rateLabel": "客房价格",
+    "priceFrom": "From {price} / 晚",
+    "rateRows": {
+      "weekday": "周一–周四",
+      "fri": "周五",
+      "sat": "周六"
+    },
+    "slide": "{current} / {total}",
+    "prev": "上一张",
+    "next": "下一张",
+    "items": [
+      {
+        "slug": "double",
+        "name": "双人房",
+        "capacity": "2人",
+        "size": "14 m²",
+        "beds": "双人床 1 张 (1,300 × 2,000 mm)",
+        "desc": "柔软大床,温暖灯光,紧凑舒适。",
+        "amenities": ["免费 Wi-Fi", "平板电视", "空调", "独立浴室", "吹风机"],
+        "priceFrom": "₩70,000",
+        "rates": {
+          "weekday": "₩70,000",
+          "fri": "₩140,000",
+          "sat": "₩160,000"
+        },
+        "images": [
+          "/images/double-1.jpg",
+          "/images/double-2.jpg",
+          "/images/double-3.jpg",
+          "/images/double-4.jpg",
+          "/images/double-5.jpg",
+          "/images/double-6.jpg",
+          "/images/double-7.jpg"
+        ]
+      },
+      {
+        "slug": "twin",
+        "name": "双床房",
+        "capacity": "2人",
+        "size": "15 m²",
+        "beds": "单人床 2 张 (每张 900 × 2,000 mm)",
+        "desc": "两张单人床,适合朋友或家人同住。",
+        "amenities": ["免费 Wi-Fi", "平板电视", "空调", "独立浴室", "吹风机"],
+        "priceFrom": "₩80,000",
+        "rates": {
+          "weekday": "₩80,000",
+          "fri": "₩150,000",
+          "sat": "₩170,000"
+        },
+        "images": [
+          "/images/twin-1.jpg",
+          "/images/twin-2.jpg",
+          "/images/twin-3.jpg",
+          "/images/twin-4.jpg",
+          "/images/twin-5.jpg",
+          "/images/twin-6.jpg"
+        ]
+      }
+    ]
+  },
+  "longStay": {
+    "eyebrow": "Long Stay",
+    "title": "计划入住10晚以上?",
+    "body": "请直接联系我们,我们会尽力为您准备更优的价格与更顺畅的长期入住体验。提交咨询后,我们会确认空房并发送专属付款链接。",
+    "bullets": [
+      "入住10晚以上,免费赠送1晚或免费机场出租车接送",
+      "每3天一次免费客房清洁",
+      "安静的社区,轻松通达首尔各处",
+      "贴心的专属支持,贯穿整个入住期间"
+    ],
+    "cta": "咨询长期入住",
+    "note": "将会在新窗口打开 Google 表单。",
+    "process": {
+      "heading": "Long Stay Reservation Process",
+      "steps": [
+        "提交 Google 表单",
+        "运营方确认可用性",
+        "发送付款链接",
+        "客人完成付款",
+        "预订确认"
+      ],
+      "disclaimer": "提交表单并不代表预订已确认。\n我们会先确认空房情况，若您所需的日期可以预订，将通过电子邮件向您发送专属付款链接。\n只有在付款完成后，预订才会最终确认。"
+    }
+  },
+  "facilities": {
+    "eyebrow": "Facilities",
+    "title": "把基本的做好。",
+    "items": [
+      { "name": "休息室", "desc": "可放松或办公的共享空间。" },
+      { "name": "洗烘一体机", "desc": "一次循环即可洗涤与烘干。" },
+      { "name": "饮水机", "desc": "随时提供冷热水。" },
+      { "name": "微波炉", "desc": "加热简餐与夜宵。" },
+      { "name": "免费行李寄存", "desc": "入住前或退房后均可使用。" },
+      { "name": "贴心备品", "desc": "各楼层均备有额外的毛巾与卫生纸。" }
+    ]
+  },
+  "location": {
+    "eyebrow": "Location",
+    "title": "中央 — 闹中取静，去哪都方便。",
+    "body": "舒适天堂 距中央站步行几分钟,这里是首尔重要的换乘枢纽,可快速抵达各地。",
+    "access": [
+      { "place": "圣水", "time": "5分钟" },
+      { "place": "东大门", "time": "10分钟" },
+      { "place": "钟路 / 光化门", "time": "15分钟" },
+      { "place": "明洞", "time": "15分钟" },
+      { "place": "弘大", "time": "25分钟" }
+    ],
+    "nearby": "周边有便利店、Olive Young、Daiso 与超市,日常所需一应俱全。",
+    "mapLinks": {
+      "google": "Google 地图",
+      "naver": "Naver 地图"
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "常见问题。",
+    "items": [
+      {
+        "q": "可以深夜入住吗?",
+        "a": "可以。从前台关闭的晚上9点起,至次日凌晨3点,您可通过我们的非接触式入住支持系统办理入住。请放心 — 我们会确保您顺利入住。"
+      },
+      {
+        "q": "长期入住有折扣吗?",
+        "a": "10晚以上欢迎直接联系我们,通过Long Stay表单咨询,我们会回复个性化报价。"
+      },
+      {
+        "q": "具体位置在哪里?",
+        "a": "首尔市中心，距中央站步行几分钟,是连接市内主要区域的交通枢纽,15分钟内可抵达大部分热门地点。"
+      },
+      {
+        "q": "直接预订如何付款?",
+        "a": "确认空房后,我们会通过邮件发送个人付款链接。日期确认后再付款即可。"
+      },
+      {
+        "q": "支持哪些语言?",
+        "a": "英语、日语、中文、韩语均可。请用您方便的语言与我们联系。"
+      },
+      {
+        "q": "免费行李寄存什么时候可以使用?",
+        "a": "入住前与退房后,均提供免费行李寄存服务。\n\n入住前: 您可将行李寄存在前台,客房清洁完毕、准备就绪后,我们会为您送入客房。\n\n退房后: 行李寄存至前台关闭前1小时。\n周一至周六: 至晚上8点\n周日: 至下午6点"
+      }
+    ]
+  },
+  "guestNotes": {
+    "eyebrow": "Guest Notes",
+    "title": "来自住客的一些话。",
+    "items": [
+      { "quote": "安静、干净,晚到自助登记非常顺畅。像首尔的一处安静小家。", "author": "日本住客" },
+      { "quote": "探索城市的绝佳位置,主人也非常贴心。", "author": "台湾住客" },
+      { "quote": "我们住了三周,舍不得离开。强烈推荐。", "author": "法国住客" }
+    ]
+  },
+  "booking": {
+    "eyebrow": "Book",
+    "title": "随时欢迎预订。",
+    "body": "10晚以上的长期入住,请直接咨询,我们会回复空房情况与专属付款链接。短期入住建议通过各 OTA 合作方预订。",
+    "longStayCta": "长期入住咨询",
+    "shortStay": "短期入住预订渠道",
+    "contact": "联系方式",
+    "email": "hello@example.com",
+    "instagram": "Instagram",
+    "booking": "Booking.com",
+    "agoda": "Agoda",
+    "trip": "Trip.com"
+  },
+  "floating": {
+    "cta": "长期入住咨询"
+  },
+  "footer": {
+    "tagline": "STAY HEAVEN · Seoul",
+    "rights": "All rights reserved.",
+    "credit": "制作",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "business": {
+      "heading": "商户信息",
+      "name": { "label": "商号", "value": "舒适天堂" },
+      "registration": { "label": "营业执照号码", "value": "000-00-00000" },
+      "representative": { "label": "代表人", "value": "洪吉童" },
+      "address": { "label": "营业地址", "value": "首尔特别市中区例示路00号" },
+      "phone": { "label": "电话号码", "value": "+82-2-0000-0000" }
+    }
+  }
+}
