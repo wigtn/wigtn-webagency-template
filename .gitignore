@@ -8,3 +8,6 @@ out/
 .vercel
 next-env.d.ts
 tsconfig.tsbuildinfo
+
+# business docs (not part of template)
+*.pdf
