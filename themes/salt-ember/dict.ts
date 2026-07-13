@@ -75,24 +75,24 @@ const en: Dict = {
     kicker: 'Seasonal · Charcoal Kitchen',
     title: 'Charcoal, salt,',
     titleAccent: 'and the season.',
-    lead: 'A small fine-dining room in Seoul. We cook over charcoal, season with salt, and build the course around what is good that week.',
+    lead: 'A small dining room in Seoul built around live charcoal, sea salt, and the best ingredients we find each week.',
     cta: 'Reserve a table',
     scroll: 'Scroll',
   },
   menu: {
     kicker: 'Course · Seasonal Menu',
     title: 'The Tasting',
-    intro: 'One set course that changes with the season. Most dishes are grilled over charcoal or finished with salt.',
+    intro: 'A seasonal course led by the fire counter. Most dishes touch live charcoal, sea salt, or both.',
     courses: [
       {
         name: 'Dinner Course',
         price: '₩120,000',
-        blurb: 'Seven courses · appetiser to dessert',
+        blurb: 'Seven courses from first bite to dessert',
       },
       {
         name: 'Lunch Course',
         price: '₩65,000',
-        blurb: 'Four courses · a lighter midday menu',
+        blurb: 'Four courses for a lighter midday table',
       },
     ],
     stages: [
@@ -134,9 +134,9 @@ const en: Dict = {
   },
   story: {
     kicker: 'The Chef',
-    title: 'Charcoal, salt, and good timing.',
+    title: 'Fire, salt, and good timing.',
     body: [
-      'Salt & Ember started with one grill. We would rather let charcoal and salt do the work than cover a dish in sauce — so most of what we serve comes down to good ingredients and getting the timing right.',
+      'Salt & Ember started with one grill. We would rather let charcoal and salt do the work than cover a dish in sauce, so most of what we serve comes down to ingredients, heat, and timing.',
       'We pick what is best that week, cook it over live coal, and season with sea salt from the southern coast.',
     ],
     signature: 'Jae-min Seo',
@@ -145,7 +145,7 @@ const en: Dict = {
   },
   gallery: {
     kicker: 'The Room',
-    title: 'Warm fire, low light.',
+    title: 'The room around the fire.',
     tiles: [
       { label: 'Smoked Broth', sub: 'noodles & blistered tomato', a: '#c65f3a', b: '#1a1512' },
       { label: 'Seared Scallops', sub: 'from the fire counter', a: '#d9a441', b: '#7a3b22' },
@@ -198,8 +198,8 @@ const en: Dict = {
   },
   reservation: {
     kicker: 'Book a Table',
-    title: 'Reserve a table.',
-    lead: 'We seat guests at the counter and in the dining room only. Send a request below and we will confirm by phone.',
+    title: 'Book the fire counter.',
+    lead: 'Choose a date, party size, and time. We will confirm availability by phone before the table is held.',
     dateLabel: 'Date',
     partyLabel: 'Party size',
     timeLabel: 'Time',
@@ -227,20 +227,20 @@ const en: Dict = {
 const ko: Dict = {
   nav: { menu: '메뉴', story: '이야기', visit: '방문', reserve: '예약' },
   hero: {
-    kicker: '시즌 · 숯불 요리',
+    kicker: '제철 · 숯불 다이닝',
     title: '숯불과 소금,',
     titleAccent: '그리고 제철.',
-    lead: '숯불에 굽고 소금으로 간을 맞춥니다. 제철 재료로 코스를 짜는 서울의 작은 파인다이닝, SALT & EMBER.',
+    lead: '라이브 숯불과 바다 소금, 그 주 가장 좋은 재료로 코스를 짜는 서울의 작은 다이닝 룸입니다.',
     cta: '테이블 예약하기',
     scroll: '아래로',
   },
   menu: {
     kicker: '코스 · 시즌 메뉴',
     title: '테이스팅 코스',
-    intro: '제철에 맞춰 코스가 바뀝니다. 대부분의 요리는 숯불에 굽거나 소금으로 마무리합니다.',
+    intro: '파이어 카운터를 중심으로 계절마다 코스가 바뀝니다. 대부분의 요리는 숯불, 바다 소금, 혹은 둘 모두를 거칩니다.',
     courses: [
-      { name: '디너 코스', price: '₩120,000', blurb: '일곱 코스 · 전채부터 디저트까지' },
-      { name: '런치 코스', price: '₩65,000', blurb: '네 코스 · 가볍게 즐기는 낮 코스' },
+      { name: '디너 코스', price: '₩120,000', blurb: '첫 접시부터 디저트까지 일곱 코스' },
+      { name: '런치 코스', price: '₩65,000', blurb: '낮에 가볍게 즐기는 네 코스' },
     ],
     stages: [
       {
@@ -256,15 +256,15 @@ const ko: Dict = {
         label: '전채 · Appetizer',
         dishes: [
           { name: '소금 숙성 방어', note: '3일 숙성, 그을린 시트러스, 들기름' },
-          { name: '구운 대파와 사골 골수', note: '숯불 대파, 골수 버터, 차이브 재' },
+          { name: '구운 대파와 본 매로우', note: '숯불 대파, 골수 버터, 차이브 애시' },
         ],
       },
       {
         tag: '03',
         label: '메인 · Main',
         dishes: [
-          { name: '엠버 숙성 한우', note: '45일 숙성, 참숯 위에서, 발효 고추 육수' },
-          { name: '숯불 훈제 돼지 갈비', note: '6시간 훈제, 소금 러브, 그을린 대파' },
+          { name: '엠버 에이징 한우', note: '45일 숙성, 참숯, 발효 고추 주스' },
+          { name: '숯불 훈제 돼지 갈비', note: '6시간 훈연, 소금 럽, 그을린 대파' },
           { name: '오늘의 생선 구이', note: '숯불에 구운 제철 생선, 브라운 버터, 허브' },
         ],
       },
@@ -272,7 +272,7 @@ const ko: Dict = {
         tag: '04',
         label: '디저트 · Dessert',
         dishes: [
-          { name: '태운 꿀 커스터드', note: '캐러멜라이즈드 꿀, 훈제 크림, 천일염' },
+          { name: '번트 허니 커스터드', note: '캐러멜라이즈한 꿀, 훈제 크림, 천일염' },
           { name: '엠버 배', note: '숯불에 구운 배, 앰버 캐러멜, 볶은 곡물' },
         ],
       },
@@ -281,10 +281,10 @@ const ko: Dict = {
   },
   story: {
     kicker: '셰프',
-    title: '숯불과 제철 재료로.',
+    title: '불과 소금, 그리고 타이밍.',
     body: [
-      'SALT & EMBER는 그릴 하나로 시작했습니다. 소스로 덮기보다 숯불과 소금, 그리고 굽는 타이밍으로 재료 본연의 맛을 살리려 합니다.',
-      '그날그날 좋은 제철 재료를 골라 숯불에 굽고, 남해안에서 직접 가져온 천일염으로 간을 맞춥니다.',
+      'SALT & EMBER는 하나의 그릴에서 시작했습니다. 소스로 덮기보다 숯불과 소금, 굽는 타이밍으로 재료의 맛을 또렷하게 살립니다.',
+      '그 주 가장 좋은 제철 재료를 골라 라이브 숯불에 굽고, 남해안 천일염으로 마지막 간을 맞춥니다.',
     ],
     signature: '서재민',
     role: '오너 셰프',
@@ -292,7 +292,7 @@ const ko: Dict = {
   },
   gallery: {
     kicker: '공간',
-    title: '따뜻한 불, 그리고 낮은 조명.',
+    title: '불을 둘러싼 낮은 조도.',
     tiles: [
       { label: '훈제 육수 국수', sub: '구운 방울토마토와', a: '#c65f3a', b: '#1a1512' },
       { label: '관자 구이', sub: '파이어 카운터에서', a: '#d9a441', b: '#7a3b22' },
@@ -313,7 +313,7 @@ const ko: Dict = {
         rating: 5,
       },
       {
-        quote: '생일에 갔는데 태운 꿀 커스터드가 한동안 생각났어요. 카운터석 자리 추천합니다.',
+        quote: '생일에 갔는데 번트 허니 커스터드가 한동안 생각났어요. 가능하면 카운터석을 추천합니다.',
         name: 'Marcus V.',
         meta: '파이어 카운터',
         rating: 5,
@@ -328,7 +328,7 @@ const ko: Dict = {
   },
   visit: {
     kicker: '위치 & 시간',
-    title: '찾아오시는 길.',
+    title: '공간과 영업시간.',
     addressLabel: '주소',
     address: ['서울 용산구 이태원로55가길 14', '용산구, 서울', '대한민국'],
     hoursLabel: '영업시간',
@@ -345,8 +345,8 @@ const ko: Dict = {
   },
   reservation: {
     kicker: '테이블 예약',
-    title: '테이블을 예약하세요.',
-    lead: '카운터석과 다이닝 룸으로만 운영합니다. 아래로 요청을 남겨 주시면 전화로 확정해 드립니다.',
+    title: '파이어 카운터 예약.',
+    lead: '날짜와 인원, 시간을 선택해 요청을 남겨 주세요. 가능 여부 확인 후 전화로 예약을 확정합니다.',
     dateLabel: '날짜',
     partyLabel: '인원',
     timeLabel: '시간',

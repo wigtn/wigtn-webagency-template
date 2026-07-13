@@ -1,18 +1,20 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, ArrowRight, Plus } from 'lucide-react';
 import FadeIn from '@/components/FadeIn';
 import type { Locale } from '@/i18n/routing';
-import { spaceGrotesk, inter, spaceMono } from './fonts';
+import { inter, spaceGrotesk, spaceMono } from './fonts';
 import { getDict } from './content';
 
 const INK = '#0b0b0c';
 const PAPER = '#f2f2f2';
 const BLUE = '#2b4bff';
 const ACID = '#d6ff2b';
+const displayFont = 'var(--sn-display), system-ui, sans-serif';
+const bodyFont = 'var(--sn-body), system-ui, sans-serif';
+const monoFont = 'var(--sn-mono), monospace';
 
 export default function StudioNoon({ locale }: { locale: Locale }) {
   const t = getDict(locale);
@@ -31,7 +33,7 @@ export default function StudioNoon({ locale }: { locale: Locale }) {
       style={{
         background: INK,
         color: PAPER,
-        fontFamily: 'var(--sn-body)',
+        fontFamily: bodyFont,
         minHeight: '100vh',
         overflowX: 'hidden',
       }}
@@ -49,13 +51,13 @@ export default function StudioNoon({ locale }: { locale: Locale }) {
           <a
             href="#top"
             className="text-[15px] font-bold"
-            style={{ fontFamily: 'var(--sn-display)', letterSpacing: '0.04em' }}
+            style={{ fontFamily: displayFont, letterSpacing: '0.04em' }}
           >
             STUDIO<span style={{ color: BLUE }}>.</span>NOON
           </a>
           <ul
             className="hidden items-center gap-7 text-[12px] uppercase tracking-[0.16em] sm:flex"
-            style={{ fontFamily: 'var(--sn-mono)' }}
+            style={{ fontFamily: monoFont }}
           >
             {nav.map(([label, href]) => (
               <li key={href}>
@@ -71,7 +73,7 @@ export default function StudioNoon({ locale }: { locale: Locale }) {
           <a
             href="#contact"
             className="flex items-center gap-1.5 text-[12px] uppercase tracking-[0.16em] sm:hidden"
-            style={{ fontFamily: 'var(--sn-mono)', color: BLUE }}
+            style={{ fontFamily: monoFont, color: BLUE }}
           >
             {t.nav.contact} <ArrowRight size={13} />
           </a>
@@ -101,17 +103,19 @@ function Hero({ t, reduce }: { t: ReturnType<typeof getDict>; reduce: boolean })
 
   return (
     <section className="relative px-5 pb-16 pt-36 sm:px-8 sm:pb-24 sm:pt-44">
-      {/* glow accent */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-20 right-[-10%] h-[420px] w-[420px] rounded-full"
-        style={{ background: BLUE, filter: 'blur(180px)', opacity: 0.28 }}
+        className="pointer-events-none absolute inset-x-0 top-0 h-28"
+        style={{
+          background: 'repeating-linear-gradient(90deg, rgba(43,75,255,0.24) 0 1px, transparent 1px 72px)',
+          opacity: 0.7,
+        }}
       />
       <div className="mx-auto max-w-[1400px]">
         <FadeIn>
           <p
             className="mb-8 max-w-full break-words text-[11px] uppercase tracking-[0.14em] sm:text-[12px] sm:tracking-[0.24em]"
-            style={{ fontFamily: 'var(--sn-mono)', color: BLUE }}
+            style={{ fontFamily: monoFont, color: BLUE }}
           >
             ◍ {t.hero.kicker}
           </p>
@@ -120,7 +124,7 @@ function Hero({ t, reduce }: { t: ReturnType<typeof getDict>; reduce: boolean })
         <h1
           className="font-bold leading-[0.86] tracking-[-0.03em]"
           style={{
-            fontFamily: 'var(--sn-display)',
+            fontFamily: displayFont,
             fontSize: 'clamp(2.3rem, 11.5vw, 12rem)',
           }}
         >
@@ -145,7 +149,7 @@ function Hero({ t, reduce }: { t: ReturnType<typeof getDict>; reduce: boolean })
           <a
             href="#work"
             className="group mt-10 inline-flex items-center gap-2.5 rounded-full px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.14em] transition-transform duration-200 hover:-translate-y-0.5"
-            style={{ background: PAPER, color: INK, fontFamily: 'var(--sn-mono)' }}
+            style={{ background: PAPER, color: INK, fontFamily: monoFont }}
           >
             {t.work.label}
             <ArrowRight
@@ -167,7 +171,7 @@ function Hero({ t, reduce }: { t: ReturnType<typeof getDict>; reduce: boolean })
         {reduce ? (
           <div
             className="flex flex-wrap justify-center gap-x-8 gap-y-2 px-4"
-            style={{ fontFamily: 'var(--sn-display)' }}
+            style={{ fontFamily: displayFont }}
           >
             {words.map((w, i) => (
               <span
@@ -182,7 +186,7 @@ function Hero({ t, reduce }: { t: ReturnType<typeof getDict>; reduce: boolean })
         ) : (
           <motion.div
             className="flex w-max gap-10 whitespace-nowrap"
-            style={{ fontFamily: 'var(--sn-display)' }}
+            style={{ fontFamily: displayFont }}
             animate={{ x: ['0%', '-50%'] }}
             transition={{ duration: 26, ease: 'linear', repeat: Infinity }}
           >
@@ -234,7 +238,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <span
       className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.24em]"
-      style={{ fontFamily: 'var(--sn-mono)', color: BLUE }}
+      style={{ fontFamily: monoFont, color: BLUE }}
     >
       <span style={{ width: 22, height: 1, background: BLUE }} />
       {children}
@@ -247,7 +251,7 @@ function Heading({ children }: { children: React.ReactNode }) {
     <h2
       className="mt-4 font-bold leading-[0.92] tracking-[-0.03em]"
       style={{
-        fontFamily: 'var(--sn-display)',
+        fontFamily: displayFont,
         fontSize: 'clamp(2.4rem, 6.5vw, 5.5rem)',
       }}
     >
@@ -286,16 +290,13 @@ function ProjectCard({
   p: ReturnType<typeof getDict>['work']['projects'][number];
   index: number;
 }) {
-  const [hover, setHover] = useState(false);
   return (
     <a
       href="#work"
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
       className="group block"
     >
       <div
-        className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl"
+        className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl transition-transform duration-300 group-hover:-translate-y-1"
         style={{ background: p.gradient }}
       >
         {/* real thumbnail */}
@@ -304,7 +305,7 @@ function ProjectCard({
           alt={`${p.name} — ${p.category}`}
           fill
           sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
-          className="object-cover"
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
         {/* legibility gradient for the type-as-image label */}
         <div
@@ -318,14 +319,14 @@ function ProjectCard({
         {/* type-as-image */}
         <span
           className="absolute left-4 top-3 z-10 select-none text-[11px] uppercase tracking-[0.2em]"
-          style={{ fontFamily: 'var(--sn-mono)', color: 'rgba(242,242,242,0.9)' }}
+          style={{ fontFamily: monoFont, color: 'rgba(242,242,242,0.9)' }}
         >
           {String(index + 1).padStart(2, '0')} / {p.year}
         </span>
         <span
           className="absolute bottom-2 left-4 z-10 select-none font-bold leading-[0.82] tracking-[-0.03em]"
           style={{
-            fontFamily: 'var(--sn-display)',
+            fontFamily: displayFont,
             fontSize: 'clamp(1.8rem, 4.6vw, 3rem)',
             color: '#f2f2f2',
           }}
@@ -335,16 +336,15 @@ function ProjectCard({
 
         {/* hover reveal overlay */}
         <div
-          className="absolute inset-0 z-20 flex flex-col justify-between p-5 transition-opacity duration-300"
+          className="absolute inset-0 z-20 flex flex-col justify-between p-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100"
           style={{
             background: 'rgba(11,11,12,0.86)',
-            opacity: hover ? 1 : 0,
           }}
         >
           <div className="flex items-start justify-between">
             <span
               className="text-[11px] uppercase tracking-[0.2em]"
-              style={{ fontFamily: 'var(--sn-mono)', color: BLUE }}
+              style={{ fontFamily: monoFont, color: BLUE }}
             >
               {p.category}
             </span>
@@ -367,13 +367,13 @@ function ProjectCard({
       <div className="mt-3 flex items-baseline justify-between">
         <h3
           className="text-[18px] font-semibold tracking-[-0.01em]"
-          style={{ fontFamily: 'var(--sn-display)' }}
+          style={{ fontFamily: displayFont }}
         >
           {p.name}
         </h3>
         <span
           className="text-[12px] uppercase tracking-[0.14em]"
-          style={{ fontFamily: 'var(--sn-mono)', color: 'rgba(242,242,242,0.5)' }}
+          style={{ fontFamily: monoFont, color: 'rgba(242,242,242,0.5)' }}
         >
           {p.category} · {p.year}
         </span>
@@ -406,7 +406,7 @@ function Services({ t }: { t: ReturnType<typeof getDict> }) {
               >
                 <span
                   className="text-[13px]"
-                  style={{ fontFamily: 'var(--sn-mono)', color: BLUE }}
+                  style={{ fontFamily: monoFont, color: BLUE }}
                 >
                   {String(i + 1).padStart(2, '0')}
                 </span>
@@ -414,7 +414,7 @@ function Services({ t }: { t: ReturnType<typeof getDict> }) {
                   className="text-[clamp(1.7rem,4vw,3rem)] font-semibold tracking-[-0.02em] transition-colors duration-200 group-hover:text-[color:var(--sn-hover)]"
                   style={
                     {
-                      fontFamily: 'var(--sn-display)',
+                      fontFamily: displayFont,
                       ['--sn-hover' as string]: BLUE,
                     } as React.CSSProperties
                   }
@@ -440,41 +440,42 @@ function Services({ t }: { t: ReturnType<typeof getDict> }) {
 
 function Process({ t }: { t: ReturnType<typeof getDict> }) {
   return (
-    <section className="px-5 py-20 sm:px-8 sm:py-32">
+    <section className="px-5 py-16 sm:px-8 sm:py-24" style={{ borderTop: '1px solid rgba(242,242,242,0.10)' }}>
       <div className="mx-auto max-w-[1400px]">
         <FadeIn>
-          <SectionLabel>{t.process.label}</SectionLabel>
-          <Heading>{t.process.heading}</Heading>
+          <div className="grid gap-7 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+            <div>
+              <SectionLabel>{t.process.label}</SectionLabel>
+              <Heading>{t.process.heading}</Heading>
+            </div>
+            <p className="max-w-[48ch] text-[17px] leading-relaxed lg:justify-self-end" style={{ color: 'rgba(242,242,242,0.74)' }}>
+              A simple working rhythm, kept visible from first call to launch. No mystery phase, no theatrical reveal.
+            </p>
+          </div>
         </FadeIn>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 border-y" style={{ borderColor: 'rgba(242,242,242,0.18)' }}>
           {t.process.steps.map((s, i) => (
             <FadeIn key={s.title} delay={0.05 * i}>
               <div
-                className="flex h-full flex-col rounded-2xl p-6"
-                style={{
-                  border: '1px solid rgba(242,242,242,0.14)',
-                  background:
-                    i === 0
-                      ? 'linear-gradient(160deg, rgba(43,75,255,0.16), rgba(43,75,255,0.02))'
-                      : 'transparent',
-                }}
+                className="group grid gap-5 py-6 transition-colors duration-200 hover:bg-white/[0.025] md:grid-cols-[5rem_0.9fr_1.2fr] md:py-7"
+                style={{ borderTop: i === 0 ? '0' : '1px solid rgba(242,242,242,0.13)' }}
               >
                 <span
-                  className="text-[13px] uppercase tracking-[0.18em]"
-                  style={{ fontFamily: 'var(--sn-mono)', color: BLUE }}
+                  className="text-[13px] uppercase tracking-[0.18em] transition-colors duration-200 group-hover:text-[color:var(--sn-paper)]"
+                  style={{ fontFamily: monoFont, color: BLUE, ['--sn-paper' as string]: PAPER } as React.CSSProperties}
                 >
-                  Step {String(i + 1).padStart(2, '0')}
+                  {String(i + 1).padStart(2, '0')}
                 </span>
                 <h3
-                  className="mt-8 text-[26px] font-semibold tracking-[-0.02em]"
-                  style={{ fontFamily: 'var(--sn-display)' }}
+                  className="text-[clamp(2rem,5vw,4.2rem)] font-semibold leading-[0.9] tracking-[-0.03em] transition-transform duration-300 group-hover:translate-x-1"
+                  style={{ fontFamily: displayFont }}
                 >
                   {s.title}
                 </h3>
                 <p
-                  className="mt-2 text-[15px] leading-relaxed"
-                  style={{ color: 'rgba(242,242,242,0.6)' }}
+                  className="max-w-[38rem] text-[15px] leading-relaxed md:pt-1"
+                  style={{ color: 'rgba(242,242,242,0.72)' }}
                 >
                   {s.body}
                 </p>
@@ -493,20 +494,40 @@ function Studio({ t }: { t: ReturnType<typeof getDict> }) {
   return (
     <section
       id="studio"
-      className="px-5 py-20 sm:px-8 sm:py-32"
+      className="px-5 py-16 sm:px-8 sm:py-24"
       style={{ borderTop: '1px solid rgba(242,242,242,0.10)' }}
     >
-      <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[1.2fr_1fr]">
+      <div className="mx-auto grid max-w-[1400px] gap-10 lg:grid-cols-[1.08fr_0.92fr]">
         <FadeIn>
-          <div>
+          <div className="flex h-full flex-col">
             <SectionLabel>{t.studio.label}</SectionLabel>
             <Heading>{t.studio.heading}</Heading>
             <p
-              className="mt-8 max-w-[54ch] text-[17px] leading-relaxed"
-              style={{ color: 'rgba(242,242,242,0.66)' }}
+              className="mt-7 max-w-[54ch] text-[17px] leading-relaxed"
+              style={{ color: 'rgba(242,242,242,0.76)' }}
             >
               {t.studio.body}
             </p>
+            <div className="mt-10 grid max-w-[720px] grid-cols-1 border-y sm:grid-cols-3 lg:mt-auto" style={{ borderColor: 'rgba(242,242,242,0.18)' }}>
+              {[
+                ['OPEN SLOTS', '02 this quarter'],
+                ['CORE OUTPUT', 'Brand · Web · Motion'],
+                ['DEFAULT MODE', 'Direct team, no layers'],
+              ].map(([label, value], i) => (
+                <div
+                  key={label}
+                  className="border-t py-5 sm:border-l sm:border-t-0 sm:px-5"
+                  style={{ borderColor: 'rgba(242,242,242,0.12)', borderTopWidth: i === 0 ? 0 : undefined, borderLeftWidth: i === 0 ? 0 : undefined }}
+                >
+                  <div className="text-[10px] uppercase tracking-[0.2em]" style={{ fontFamily: monoFont, color: BLUE }}>
+                    {label}
+                  </div>
+                  <div className="mt-3 text-[15px] leading-snug" style={{ color: 'rgba(242,242,242,0.86)' }}>
+                    {value}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </FadeIn>
 
@@ -529,7 +550,7 @@ function Studio({ t }: { t: ReturnType<typeof getDict> }) {
             />
             <span
               className="absolute bottom-4 left-4 text-[11px] uppercase tracking-[0.2em]"
-              style={{ fontFamily: 'var(--sn-mono)', color: 'rgba(242,242,242,0.92)' }}
+              style={{ fontFamily: monoFont, color: 'rgba(242,242,242,0.92)' }}
             >
               ◍ STUDIO NOON · SEOUL
             </span>
@@ -547,7 +568,7 @@ function Studio({ t }: { t: ReturnType<typeof getDict> }) {
                 <span
                   className="text-[11px] uppercase tracking-[0.18em]"
                   style={{
-                    fontFamily: 'var(--sn-mono)',
+                    fontFamily: monoFont,
                     color: 'rgba(242,242,242,0.5)',
                   }}
                 >
@@ -556,7 +577,7 @@ function Studio({ t }: { t: ReturnType<typeof getDict> }) {
                 <span
                   className="text-[clamp(2.4rem,6vw,3.6rem)] font-bold leading-none tracking-[-0.03em]"
                   style={{
-                    fontFamily: 'var(--sn-display)',
+                    fontFamily: displayFont,
                     color: i === 1 ? BLUE : PAPER,
                   }}
                 >
@@ -574,9 +595,11 @@ function Studio({ t }: { t: ReturnType<typeof getDict> }) {
 /* ---------------- CLIENTS ---------------- */
 
 function Clients({ t }: { t: ReturnType<typeof getDict> }) {
+  const clientMeta = ['Identity', 'Coffee', 'Product', 'Music', 'Publishing', 'Film', 'Type', 'Festival', 'Motion', 'Culture', 'Research', 'Retail'];
+
   return (
     <section
-      className="px-5 py-20 sm:px-8 sm:py-32"
+      className="px-5 py-16 sm:px-8 sm:py-24"
       style={{ borderTop: '1px solid rgba(242,242,242,0.10)' }}
     >
       <div className="mx-auto max-w-[1400px]">
@@ -588,7 +611,7 @@ function Clients({ t }: { t: ReturnType<typeof getDict> }) {
             </div>
             <span
               className="text-[12px] uppercase tracking-[0.2em]"
-              style={{ fontFamily: 'var(--sn-mono)', color: 'rgba(242,242,242,0.45)' }}
+              style={{ fontFamily: monoFont, color: 'rgba(242,242,242,0.62)' }}
             >
               [ {String(t.clients.names.length).padStart(2, '0')} partners ]
             </span>
@@ -596,47 +619,30 @@ function Clients({ t }: { t: ReturnType<typeof getDict> }) {
         </FadeIn>
 
         <div
-          className="mt-12 grid grid-cols-1 overflow-hidden rounded-2xl sm:grid-cols-2 lg:grid-cols-3"
-          style={{
-            border: '1px solid rgba(242,242,242,0.14)',
-            gap: '1px',
-            background: 'rgba(242,242,242,0.14)',
-          }}
+          className="mt-9 grid grid-cols-1 gap-x-10 border-y lg:grid-cols-2"
+          style={{ borderColor: 'rgba(242,242,242,0.18)' }}
         >
           {t.clients.names.map((name, i) => (
             <FadeIn key={name} delay={0.015 * i}>
               <div
-                className="group relative flex h-full items-center gap-4 px-5 py-7 transition-colors duration-200"
-                style={
-                  {
-                    background: INK,
-                    ['--c' as string]: BLUE,
-                  } as React.CSSProperties
-                }
+                className="group grid grid-cols-[3rem_1fr_auto] items-center gap-4 py-5 transition-colors duration-200 hover:bg-white/[0.025]"
+                style={{ borderTop: i === 0 ? '0' : '1px solid rgba(242,242,242,0.13)' }}
               >
-                {/* hover fill */}
                 <span
-                  aria-hidden
-                  className="pointer-events-none absolute inset-0 origin-bottom scale-y-0 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-y-100"
-                  style={{ background: BLUE }}
-                />
-                <span
-                  className="relative z-10 text-[12px] tabular-nums transition-colors duration-200 group-hover:text-[#0b0b0c]"
-                  style={{ fontFamily: 'var(--sn-mono)', color: BLUE }}
+                  className="text-[12px] tabular-nums transition-colors duration-200"
+                  style={{ fontFamily: monoFont, color: BLUE }}
                 >
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <span
-                  className="relative z-10 flex-1 text-[clamp(1.15rem,2.2vw,1.55rem)] font-semibold tracking-[-0.01em] transition-colors duration-200 group-hover:text-[#0b0b0c]"
-                  style={{ fontFamily: 'var(--sn-display)', color: PAPER }}
+                  className="text-[clamp(1.3rem,2.8vw,2.1rem)] font-semibold tracking-[-0.02em] transition-transform duration-300 group-hover:translate-x-1"
+                  style={{ fontFamily: displayFont, color: PAPER }}
                 >
                   {name}
                 </span>
-                <ArrowUpRight
-                  size={16}
-                  className="relative z-10 -translate-x-1 opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100"
-                  style={{ color: INK }}
-                />
+                <span className="hidden text-right text-[11px] uppercase tracking-[0.16em] sm:block" style={{ fontFamily: monoFont, color: 'rgba(242,242,242,0.58)' }}>
+                  {clientMeta[i] ?? 'Partner'}
+                </span>
               </div>
             </FadeIn>
           ))}
@@ -657,8 +663,11 @@ function Contact({ t }: { t: ReturnType<typeof getDict> }) {
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-[-30%] left-[10%] h-[500px] w-[500px] rounded-full"
-        style={{ background: BLUE, filter: 'blur(200px)', opacity: 0.22 }}
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-32"
+        style={{
+          background:
+            'linear-gradient(135deg, transparent 0 44%, rgba(43,75,255,0.34) 44% 45%, transparent 45% 100%)',
+        }}
       />
       <div className="mx-auto max-w-[1400px]">
         <FadeIn>
@@ -668,7 +677,7 @@ function Contact({ t }: { t: ReturnType<typeof getDict> }) {
           <p
             className="mt-6 font-bold leading-[0.95] tracking-[-0.03em]"
             style={{
-              fontFamily: 'var(--sn-display)',
+              fontFamily: displayFont,
               fontSize: 'clamp(2.6rem, 7vw, 6rem)',
             }}
           >
@@ -680,7 +689,7 @@ function Contact({ t }: { t: ReturnType<typeof getDict> }) {
             href={`mailto:${t.contact.email}`}
             className="group mt-6 inline-flex items-center gap-3 font-bold leading-none tracking-[-0.03em]"
             style={{
-              fontFamily: 'var(--sn-display)',
+              fontFamily: displayFont,
               fontSize: 'clamp(1.8rem, 5.5vw, 4.6rem)',
               color: BLUE,
             }}
@@ -724,7 +733,7 @@ function Footer({ t }: { t: ReturnType<typeof getDict> }) {
           <div>
             <p
               className="text-[22px] font-bold"
-              style={{ fontFamily: 'var(--sn-display)', letterSpacing: '0.04em' }}
+              style={{ fontFamily: displayFont, letterSpacing: '0.04em' }}
             >
               STUDIO<span style={{ color: BLUE }}>.</span>NOON
             </p>
@@ -738,7 +747,7 @@ function Footer({ t }: { t: ReturnType<typeof getDict> }) {
 
           <ul
             className="flex flex-wrap gap-x-6 gap-y-2 text-[12px] uppercase tracking-[0.16em]"
-            style={{ fontFamily: 'var(--sn-mono)' }}
+            style={{ fontFamily: monoFont }}
           >
             {t.footer.socials.map((s) => (
               <li key={s}>
@@ -757,7 +766,7 @@ function Footer({ t }: { t: ReturnType<typeof getDict> }) {
           className="mt-12 flex flex-col gap-3 pt-6 text-[12px] sm:flex-row sm:items-center sm:justify-between"
           style={{
             borderTop: '1px solid rgba(242,242,242,0.10)',
-            fontFamily: 'var(--sn-mono)',
+            fontFamily: monoFont,
             color: 'rgba(242,242,242,0.5)',
           }}
         >

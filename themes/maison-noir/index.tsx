@@ -20,7 +20,7 @@ export default function MaisonNoir({ locale }: { locale: Locale }) {
 
   return (
     <div
-      className={`${cormorant.variable} ${interTight.variable} min-h-screen bg-[#0e0e0f] text-[#f4efe6] antialiased`}
+      className={`${cormorant.variable} ${interTight.variable} min-h-screen bg-[#0e0e0f] text-[#f1ece4] antialiased`}
       style={{ fontFamily: 'var(--mn-sans)' }}
     >
       <Nav nav={c.nav} />

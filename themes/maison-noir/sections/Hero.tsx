@@ -19,7 +19,7 @@ export default function Hero({ hero }: { hero: Content['hero'] }) {
     <section id="top" className="relative flex min-h-[100svh] flex-col overflow-hidden bg-[#0e0e0f]">
       {/* full-bleed photograph */}
       <Image
-        src="/images/maison-noir/hero.jpg"
+        src="/images/maison-noir/hero-v2.jpg"
         alt="Maison Noir at night"
         fill
         priority
@@ -28,7 +28,7 @@ export default function Hero({ hero }: { hero: Content['hero'] }) {
       />
       {/* legibility scrims — inline styles so arbitrary opacity always applies */}
       {/* overall slight dim to knock down the bright sky */}
-      <div aria-hidden className="pointer-events-none absolute inset-0" style={{ background: 'rgba(11,11,12,0.30)' }} />
+      <div aria-hidden className="pointer-events-none absolute inset-0" style={{ background: 'rgba(11,11,12,0.18)' }} />
       {/* top + bottom anchoring */}
       <div
         aria-hidden
@@ -44,11 +44,11 @@ export default function Hero({ hero }: { hero: Content['hero'] }) {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'linear-gradient(100deg, rgba(11,11,12,0.92) 0%, rgba(11,11,12,0.82) 42%, rgba(11,11,12,0.5) 64%, rgba(11,11,12,0.12) 86%, rgba(11,11,12,0) 100%)',
+            'linear-gradient(100deg, rgba(11,11,12,0.82) 0%, rgba(11,11,12,0.72) 42%, rgba(11,11,12,0.42) 64%, rgba(11,11,12,0.10) 86%, rgba(11,11,12,0) 100%)',
         }}
       />
       <div
-        className="absolute inset-0"
+        className="pointer-events-none absolute inset-0"
         style={{
           background:
             'radial-gradient(120% 90% at 78% 8%, rgba(200,169,106,0.16) 0%, rgba(200,169,106,0) 44%), radial-gradient(90% 80% at 20% 100%, rgba(10,10,11,0.85) 0%, rgba(14,14,15,0) 55%)',
@@ -72,7 +72,7 @@ export default function Hero({ hero }: { hero: Content['hero'] }) {
       <div className="relative z-10 mx-auto flex w-full max-w-[1200px] flex-1 flex-col justify-center px-6 pt-28 md:px-10">
         <motion.p
           {...rise(0.1)}
-          className="text-[11px] uppercase tracking-[0.42em] text-[#c8a96a]"
+          className="text-[11px] uppercase tracking-[0.34em] text-[#b89a72] md:tracking-[0.42em]"
           style={{ fontFamily: 'var(--mn-sans)' }}
         >
           {hero.kicker}
@@ -80,14 +80,14 @@ export default function Hero({ hero }: { hero: Content['hero'] }) {
 
         <motion.h1
           {...rise(0.24)}
-          className="mt-8 max-w-[14ch] text-[clamp(3rem,9vw,7.5rem)] font-light leading-[0.94] tracking-[-0.01em] text-[#f4efe6]"
+          className="mt-8 max-w-[12ch] text-[clamp(3rem,8.5vw,7.2rem)] font-light leading-[1.02] text-[#f1ece4]"
           style={{ fontFamily: 'var(--mn-serif)', textShadow: '0 2px 40px rgba(0,0,0,0.6)' }}
         >
           {hero.headline[0]}
           <br />
           <span
-            className="italic"
-            style={{ color: '#ecd9a3', textShadow: '0 2px 30px rgba(0,0,0,0.7)' }}
+            className="font-normal"
+            style={{ color: '#f1ece4', textShadow: '0 2px 30px rgba(0,0,0,0.7)' }}
           >
             {hero.headline[1]}
           </span>
@@ -95,32 +95,42 @@ export default function Hero({ hero }: { hero: Content['hero'] }) {
 
         <motion.p
           {...rise(0.42)}
-          className="mt-9 max-w-[46ch] text-[15px] font-light leading-relaxed text-[#e4ded2] md:text-[17px]"
+          className="mt-9 max-w-[46ch] text-[15px] font-light leading-relaxed text-[#d8d0c3] md:text-[17px]"
           style={{ fontFamily: 'var(--mn-sans)', textShadow: '0 1px 20px rgba(0,0,0,0.7)' }}
         >
           {hero.subtitle}
         </motion.p>
 
-        <motion.div {...rise(0.56)} className="mt-11">
+        <motion.div {...rise(0.56)} className="mt-11 flex items-center gap-5">
           <a
             href="#contact"
-            className="inline-flex items-center gap-3 border border-[#c8a96a]/45 px-9 py-4 text-[12px] uppercase tracking-[0.28em] text-[#c8a96a] transition-colors duration-300 hover:bg-[#c8a96a] hover:text-[#0e0e0f]"
+            className="inline-flex items-center gap-3 border border-[#b89a72]/45 px-9 py-4 text-[12px] uppercase tracking-[0.28em] text-[#b89a72] transition-colors duration-300 hover:bg-[#b89a72] hover:text-[#0e0e0f]"
             style={{ fontFamily: 'var(--mn-sans)' }}
           >
             {hero.cta}
           </a>
+          <span className="hidden h-px w-16 bg-[#b89a72]/35 md:block" />
         </motion.div>
       </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-[1200px] items-center gap-4 px-6 pb-10 md:px-10">
-        <span className="h-8 w-px" style={{ background: 'linear-gradient(180deg, rgba(200,169,106,0.6), transparent)' }} />
+      <a
+        href="#signature"
+        className="relative z-10 mx-auto flex w-full max-w-[1200px] items-center gap-4 px-6 pb-10 md:px-10"
+      >
+        <motion.span
+          aria-hidden
+          className="h-9 w-px"
+          animate={reduce ? undefined : { scaleY: [0.35, 1, 0.35], opacity: [0.35, 1, 0.35] }}
+          transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }}
+          style={{ background: 'linear-gradient(180deg, rgba(200,169,106,0.7), transparent)', transformOrigin: 'top' }}
+        />
         <span
-          className="text-[10px] uppercase tracking-[0.34em] text-[#9a948a]"
+          className="text-[10px] uppercase tracking-[0.3em] text-[#9f9485] transition-colors hover:text-[#b89a72]"
           style={{ fontFamily: 'var(--mn-sans)' }}
         >
           {hero.scroll}
         </span>
-      </div>
+      </a>
     </section>
   );
 }

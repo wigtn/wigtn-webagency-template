@@ -6,7 +6,6 @@ import { TEMPLATES } from '@/lib/templates/registry';
 import { getShowcaseCopy } from '@/lib/showcase-content';
 import ShowcaseNav from '@/components/showcase/ShowcaseNav';
 import TemplateRow from '@/components/showcase/TemplateRow';
-import TeamLayer from '@/components/showcase/TeamLayer';
 import WigtnLogo from '@/components/showcase/WigtnLogo';
 
 const grotesk = Space_Grotesk({ subsets: ['latin'], display: 'swap' });
@@ -87,9 +86,6 @@ export default async function ShowcaseHome({
           <TemplateRow key={meta.slug} meta={meta} locale={loc} index={i} previewLabel={copy.gallery.preview} />
         ))}
       </div>
-
-      {/* WIGTN 팀 레이어 */}
-      <TeamLayer copy={copy} ink={INK} accent={P265} />
 
       {/* Footer */}
       <footer className="border-t border-white/10 py-12 text-[#f2f1ef]/50" style={{ backgroundColor: INK }}>

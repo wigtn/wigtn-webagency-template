@@ -2,7 +2,7 @@ import type { TemplateMeta, TemplateSlug } from './types';
 
 /**
  * WIGTN 템플릿 쇼케이스 — 단일 소스.
- * 순서 = 메인 갤러리 노출 순서 (숙박 3 → F&B → 크리에이티브).
+ * 순서 = 메인 갤러리 노출 순서.
  */
 export const TEMPLATES: TemplateMeta[] = [
   {
@@ -19,21 +19,6 @@ export const TEMPLATES: TemplateMeta[] = [
     thumbnail: '/images/hero.jpg',
     typeface: 'Fraunces · Inter',
     engine: 'legacy',
-  },
-  {
-    slug: 'maison-noir',
-    category: 'lodging',
-    vertical: { ko: '시티 호텔 · 모던 럭셔리', en: 'City Hotel · Modern Luxury' },
-    brandName: 'MAISON NOIR',
-    tagline: {
-      ko: '도심 한복판의 절제된 럭셔리. 밤이 어울리는 호텔.',
-      en: 'Understated luxury in the heart of the city.',
-    },
-    accent: '#c8a96a',
-    row: { bg: '#0e0e0f', text: '#f4efe6', muted: '#9a948a' },
-    thumbnail: '/images/maison-noir/hero.jpg',
-    typeface: 'Cormorant Garamond · Inter Tight',
-    engine: 'theme',
   },
   {
     slug: 'onjae',
@@ -78,6 +63,21 @@ export const TEMPLATES: TemplateMeta[] = [
     row: { bg: '#0b0b0c', text: '#f2f2f2', muted: '#7d7d82' },
     thumbnail: '/images/studio-noon/w2.jpg',
     typeface: 'Space Grotesk · Inter',
+    engine: 'theme',
+  },
+  {
+    slug: 'maison-noir',
+    category: 'lodging',
+    vertical: { ko: '시티 호텔 · 모던 럭셔리', en: 'City Hotel · Modern Luxury' },
+    brandName: 'MAISON NOIR',
+    tagline: {
+      ko: '서울의 밤을 조용히 머무는 프라이빗 호텔.',
+      en: 'A private hotel made for Seoul nights.',
+    },
+    accent: '#b89a72',
+    row: { bg: '#0e0e0f', text: '#f1ece4', muted: '#8f887f' },
+    thumbnail: '/images/maison-noir/hero-v2.jpg',
+    typeface: 'Noto Serif KR · Noto Sans KR',
     engine: 'theme',
   },
 ];

@@ -216,13 +216,20 @@ export default function SaltEmber({ locale }: { locale: Locale }) {
           </motion.div>
         </div>
 
-        <div
+        <a
+          href="#menu"
           className="absolute bottom-8 right-8 hidden items-center gap-2 md:flex"
           style={{ ...sans, color: MUTED, fontSize: '0.7rem', letterSpacing: '0.28em' }}
         >
           <span className="uppercase">{t.hero.scroll}</span>
-          <span className="h-px w-10" style={{ backgroundColor: MUTED }} />
-        </div>
+          <motion.span
+            aria-hidden
+            className="h-px w-10"
+            animate={reduce ? undefined : { scaleX: [0.35, 1, 0.35], opacity: [0.35, 1, 0.35] }}
+            transition={{ duration: 2.1, repeat: Infinity, ease: 'easeInOut' }}
+            style={{ backgroundColor: MUTED, transformOrigin: 'left' }}
+          />
+        </a>
       </section>
 
       {/* ---------- MENU ---------- */}
@@ -249,7 +256,7 @@ export default function SaltEmber({ locale }: { locale: Locale }) {
               {t.menu.courses.map((c) => (
                 <div
                   key={c.name}
-                  className="flex items-center justify-between rounded-2xl px-7 py-6"
+                  className="flex items-center justify-between rounded-2xl px-7 py-6 transition-transform duration-300 hover:-translate-y-1"
                   style={{
                     border: '1px solid rgba(217,164,65,0.22)',
                     background: 'linear-gradient(135deg, rgba(198,95,58,0.09), rgba(217,164,65,0.03))',
@@ -281,7 +288,7 @@ export default function SaltEmber({ locale }: { locale: Locale }) {
               ].map((d) => (
                 <div
                   key={d.src}
-                  className="relative aspect-square overflow-hidden rounded-2xl"
+                  className="group relative aspect-square overflow-hidden rounded-2xl"
                   style={{ border: '1px solid rgba(217,164,65,0.18)' }}
                 >
                   <Image
@@ -289,7 +296,7 @@ export default function SaltEmber({ locale }: { locale: Locale }) {
                     alt={d.alt}
                     fill
                     sizes="(min-width: 768px) 380px, 33vw"
-                    className="object-cover transition-transform duration-700 hover:scale-105"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div
                     className="pointer-events-none absolute inset-0"
@@ -440,7 +447,7 @@ export default function SaltEmber({ locale }: { locale: Locale }) {
               const img = ['g2', 'g1', 'g3', 'dish-2', 'dish-1', 'dish-3'][i] ?? 'g1';
               return (
                 <FadeIn key={tile.label} delay={0.04 * i}>
-                  <div className="group relative flex aspect-square h-full flex-col justify-end overflow-hidden rounded-2xl p-5">
+                  <div className="group relative flex aspect-square h-full flex-col justify-end overflow-hidden rounded-2xl p-5 transition-transform duration-300 hover:-translate-y-1">
                     <Image
                       src={`/images/salt-ember/${img}.jpg`}
                       alt={`${tile.label} — ${tile.sub}`}

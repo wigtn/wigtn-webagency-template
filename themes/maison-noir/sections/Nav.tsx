@@ -28,10 +28,10 @@ export default function Nav({ nav }: { nav: Content['nav'] }) {
       <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-5 md:px-10">
         <a
           href="#top"
-          className="text-[15px] font-medium uppercase tracking-[0.42em] text-[#f4efe6]"
+          className="text-[15px] font-medium uppercase tracking-[0.42em] text-[#f1ece4]"
           style={{ fontFamily: 'var(--mn-sans)', textShadow: scrolled ? 'none' : '0 1px 12px rgba(0,0,0,0.6)' }}
         >
-          Maison<span className="text-[#c8a96a]"> Noir</span>
+          Maison<span className="text-[#b89a72]"> Noir</span>
         </a>
 
         <div
@@ -42,7 +42,7 @@ export default function Nav({ nav }: { nav: Content['nav'] }) {
             <a
               key={l.id}
               href={`#${l.id}`}
-              className="text-[12px] uppercase tracking-[0.24em] text-[#d8d2c6] transition-colors duration-300 hover:text-[#f4efe6]"
+              className="text-[12px] uppercase tracking-[0.24em] text-[#cec7bd] transition-colors duration-300 hover:text-[#f1ece4]"
               style={{ textShadow: scrolled ? 'none' : '0 1px 12px rgba(0,0,0,0.6)' }}
             >
               {l.label}
@@ -50,7 +50,7 @@ export default function Nav({ nav }: { nav: Content['nav'] }) {
           ))}
           <a
             href="#contact"
-            className="border border-[#c8a96a]/45 px-6 py-2.5 text-[11px] uppercase tracking-[0.28em] text-[#c8a96a] transition-colors duration-300 hover:bg-[#c8a96a] hover:text-[#0e0e0f]"
+            className="border border-[#b89a72]/45 px-6 py-2.5 text-[11px] uppercase tracking-[0.28em] text-[#b89a72] transition-colors duration-300 hover:bg-[#b89a72] hover:text-[#0e0e0f]"
           >
             {nav.reserve}
           </a>
@@ -61,7 +61,7 @@ export default function Nav({ nav }: { nav: Content['nav'] }) {
           aria-label="Menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="text-[#f4efe6] md:hidden"
+          className="text-[#f1ece4] md:hidden"
         >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
@@ -69,7 +69,7 @@ export default function Nav({ nav }: { nav: Content['nav'] }) {
 
       {open && (
         <div
-          className="border-t border-[#c8a96a]/12 bg-[#0e0e0f]/95 px-6 pb-8 pt-2 md:hidden"
+          className="border-t border-[#b89a72]/12 bg-[#0e0e0f]/95 px-6 pb-8 pt-2 md:hidden"
           style={{ fontFamily: 'var(--mn-sans)', backdropFilter: 'blur(14px)' }}
         >
           <div className="flex flex-col gap-1">
@@ -78,7 +78,7 @@ export default function Nav({ nav }: { nav: Content['nav'] }) {
                 key={l.id}
                 href={`#${l.id}`}
                 onClick={() => setOpen(false)}
-                className="border-b border-white/5 py-3.5 text-[13px] uppercase tracking-[0.24em] text-[#9a948a]"
+                className="border-b border-white/5 py-3.5 text-[13px] uppercase tracking-[0.24em] text-[#8f887f]"
               >
                 {l.label}
               </a>
@@ -86,7 +86,7 @@ export default function Nav({ nav }: { nav: Content['nav'] }) {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="mt-5 border border-[#c8a96a]/45 py-3.5 text-center text-[12px] uppercase tracking-[0.28em] text-[#c8a96a]"
+              className="mt-5 border border-[#b89a72]/45 py-3.5 text-center text-[12px] uppercase tracking-[0.28em] text-[#b89a72]"
             >
               {nav.reserve}
             </a>
