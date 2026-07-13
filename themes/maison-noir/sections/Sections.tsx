@@ -105,8 +105,14 @@ export function Rooms({ data }: { data: Content['rooms'] }) {
                 </ul>
 
                 {/* rate */}
-                <div className="flex items-baseline gap-2 md:flex-col md:items-end md:text-right">
-                  <span className="text-[22px] font-light text-[#c8a96a]" style={serif}>
+                <div className="flex items-center gap-3 md:flex-col md:items-end md:gap-2 md:text-right">
+                  <span
+                    className="inline-flex items-baseline rounded-[3px] border border-[#c8a96a]/25 bg-[#08080a]/90 px-3.5 py-2 text-[19px] font-medium tabular-nums text-[#c8a96a]"
+                    style={{
+                      fontFamily: 'var(--mn-sans)',
+                      fontFeatureSettings: '"lnum" 1, "tnum" 1',
+                    }}
+                  >
                     {room.rate}
                   </span>
                   <span className="text-[11px] uppercase tracking-[0.2em] text-[#9a948a]" style={sans}>

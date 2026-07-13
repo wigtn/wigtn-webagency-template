@@ -57,7 +57,7 @@ export default function ShowcaseNav({
           </a>
           <span className="hidden h-4 w-px bg-white/15 sm:block" aria-hidden />
           <div className="hidden sm:block">
-            <LanguageSwitcher variant="dark" />
+            <LanguageSwitcher variant="dark" locales={['ko', 'en']} />
           </div>
         </nav>
       </div>

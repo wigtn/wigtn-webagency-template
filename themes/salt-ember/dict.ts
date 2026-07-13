@@ -115,7 +115,8 @@ const en: Dict = {
         label: 'Main · 메인',
         dishes: [
           { name: 'Ember-Aged Hanwoo', note: '45-day, over binchotan, fermented pepper jus' },
-          { name: 'Whole Fire Trout', note: 'salt-crust baked, brown butter, seasonal herbs' },
+          { name: 'Coal-Smoked Pork Ribs', note: 'six-hour smoke, salt rub, charred scallion' },
+          { name: 'Grilled Catch of the Day', note: 'flame-grilled seasonal fish, brown butter, herbs' },
         ],
       },
       {
@@ -144,12 +145,12 @@ const en: Dict = {
     kicker: 'The Room',
     title: 'Warmth, smoke, and quiet light.',
     tiles: [
-      { label: 'The Fire Counter', sub: 'ten seats at the flame', a: '#c65f3a', b: '#1a1512' },
-      { label: 'Ember Hanwoo', sub: 'over binchotan', a: '#d9a441', b: '#7a3b22' },
-      { label: 'The Dining Room', sub: 'candle & clay', a: '#3a2a20', b: '#1a1512' },
-      { label: 'Salt-Cured', sub: 'the cure cellar', a: '#a08d7e', b: '#2a2018' },
-      { label: 'Burnt Honey', sub: 'the sweet fire', a: '#d9a441', b: '#c65f3a' },
-      { label: 'Coal & Herb', sub: 'the pass', a: '#7a3b22', b: '#1a1512' },
+      { label: 'Smoked Broth', sub: 'noodles & blistered tomato', a: '#c65f3a', b: '#1a1512' },
+      { label: 'Seared Scallops', sub: 'from the fire counter', a: '#d9a441', b: '#7a3b22' },
+      { label: 'Sliced & Fired Steak', sub: 'over binchotan', a: '#3a2a20', b: '#1a1512' },
+      { label: 'Ember Beef Salad', sub: 'charred & bright', a: '#a08d7e', b: '#2a2018' },
+      { label: 'Grilled Catch', sub: 'salt & sea', a: '#d9a441', b: '#c65f3a' },
+      { label: 'Smoked Pork Ribs', sub: 'low over coal', a: '#7a3b22', b: '#1a1512' },
     ],
   },
   reviews: {
@@ -259,7 +260,8 @@ const ko: Dict = {
         label: '메인 · Main',
         dishes: [
           { name: '엠버 숙성 한우', note: '45일 숙성, 참숯 위에서, 발효 고추 육수' },
-          { name: '통 파이어 송어', note: '소금 크러스트 구이, 브라운 버터, 제철 허브' },
+          { name: '숯불 훈제 돼지 갈비', note: '6시간 훈제, 소금 러브, 그을린 대파' },
+          { name: '오늘의 생선 구이', note: '숯불에 구운 제철 생선, 브라운 버터, 허브' },
         ],
       },
       {
@@ -288,12 +290,12 @@ const ko: Dict = {
     kicker: '공간',
     title: '따뜻함, 연기, 그리고 낮은 빛.',
     tiles: [
-      { label: '파이어 카운터', sub: '불 앞의 열 자리', a: '#c65f3a', b: '#1a1512' },
-      { label: '엠버 한우', sub: '참숯 위에서', a: '#d9a441', b: '#7a3b22' },
-      { label: '다이닝 룸', sub: '촛불과 흙', a: '#3a2a20', b: '#1a1512' },
-      { label: '소금 숙성', sub: '숙성 셀러', a: '#a08d7e', b: '#2a2018' },
-      { label: '태운 꿀', sub: '달콤한 불', a: '#d9a441', b: '#c65f3a' },
-      { label: '숯과 허브', sub: '패스', a: '#7a3b22', b: '#1a1512' },
+      { label: '훈제 육수 국수', sub: '구운 방울토마토와', a: '#c65f3a', b: '#1a1512' },
+      { label: '관자 구이', sub: '파이어 카운터에서', a: '#d9a441', b: '#7a3b22' },
+      { label: '숯불 채끝 스테이크', sub: '참숯 위에서', a: '#3a2a20', b: '#1a1512' },
+      { label: '엠버 소고기 샐러드', sub: '불향과 산뜻함', a: '#a08d7e', b: '#2a2018' },
+      { label: '생선 구이', sub: '소금과 바다', a: '#d9a441', b: '#c65f3a' },
+      { label: '훈제 돼지 갈비', sub: '숯불에 은근히', a: '#7a3b22', b: '#1a1512' },
     ],
   },
   reviews: {

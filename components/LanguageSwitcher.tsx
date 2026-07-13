@@ -6,13 +6,16 @@ import { routing } from '@/i18n/routing';
 import { LOCALE_LABELS } from '@/lib/constants';
 import { useTransition } from 'react';
 
-type Props = { variant?: 'light' | 'dark' };
+type Props = { variant?: 'light' | 'dark'; locales?: readonly string[] };
 
-export default function LanguageSwitcher({ variant = 'light' }: Props) {
+export default function LanguageSwitcher({ variant = 'light', locales }: Props) {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
+
+  // 표시할 로케일 (미지정 시 전체). 메인 쇼케이스는 ['ko','en']만 노출.
+  const shown = locales ?? routing.locales;
 
   const onSelect = (next: string) => {
     if (next === locale) return;
@@ -32,7 +35,7 @@ export default function LanguageSwitcher({ variant = 'light' }: Props) {
 
   return (
     <div className="flex items-center gap-2.5 text-xs">
-      {routing.locales.map((l, idx) => (
+      {shown.map((l, idx) => (
         <div key={l} className="flex items-center gap-2.5">
           <button
             onClick={() => onSelect(l)}
@@ -43,9 +46,7 @@ export default function LanguageSwitcher({ variant = 'light' }: Props) {
           >
             {LOCALE_LABELS[l]}
           </button>
-          {idx < routing.locales.length - 1 && (
-            <span className={divider}>·</span>
-          )}
+          {idx < shown.length - 1 && <span className={divider}>·</span>}
         </div>
       ))}
     </div>
