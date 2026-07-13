@@ -27,20 +27,24 @@ export default function Hero({ hero }: { hero: Content['hero'] }) {
         className="object-cover"
       />
       {/* legibility scrims — inline styles so arbitrary opacity always applies */}
+      {/* overall slight dim to knock down the bright sky */}
+      <div aria-hidden className="pointer-events-none absolute inset-0" style={{ background: 'rgba(11,11,12,0.30)' }} />
+      {/* top + bottom anchoring */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'linear-gradient(180deg, rgba(14,14,15,0.5) 0%, rgba(14,14,15,0) 22%, rgba(14,14,15,0) 55%, rgba(14,14,15,0.9) 100%)',
+            'linear-gradient(180deg, rgba(11,11,12,0.6) 0%, rgba(11,11,12,0) 24%, rgba(11,11,12,0) 58%, rgba(11,11,12,0.9) 100%)',
         }}
       />
+      {/* wide left column — darkens the FULL width of the headline (which reaches into the bright sky) */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'linear-gradient(95deg, rgba(14,14,15,0.82) 0%, rgba(14,14,15,0.5) 32%, rgba(14,14,15,0.12) 62%, rgba(14,14,15,0) 82%)',
+            'linear-gradient(100deg, rgba(11,11,12,0.92) 0%, rgba(11,11,12,0.82) 42%, rgba(11,11,12,0.5) 64%, rgba(11,11,12,0.12) 86%, rgba(11,11,12,0) 100%)',
         }}
       />
       <div
@@ -81,7 +85,12 @@ export default function Hero({ hero }: { hero: Content['hero'] }) {
         >
           {hero.headline[0]}
           <br />
-          <span className="italic text-[#c8a96a]">{hero.headline[1]}</span>
+          <span
+            className="italic"
+            style={{ color: '#ecd9a3', textShadow: '0 2px 30px rgba(0,0,0,0.7)' }}
+          >
+            {hero.headline[1]}
+          </span>
         </motion.h1>
 
         <motion.p

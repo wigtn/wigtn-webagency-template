@@ -128,17 +128,17 @@ const en: Content = {
   },
   hero: {
     kicker: 'MAISON NOIR · SEOUL',
-    headline: ['A quieter kind', 'of luxury'],
+    headline: ['A small hotel', 'above Seoul'],
     subtitle:
-      'A nocturnal city retreat above the lights of Seoul — intimate, unhurried, wholly yours.',
+      'Thirty-eight rooms on the upper floors of a 1930s tower in Yongsan. Quiet, dark, and easy to disappear into.',
     cta: 'Reserve a stay',
     scroll: 'Scroll',
   },
   signature: {
     eyebrow: 'The House',
     quote:
-      '“We built Maison Noir for the traveller who has seen everything, and now seeks only stillness.”',
-    body: 'Behind an unmarked bronze door, thirty-eight rooms and suites unfold across the upper floors of a restored 1930s tower. No lobby theatre, no crowds — only low light, deep silence, and a staff that remembers your name before you give it.',
+      '“We kept it small on purpose. Thirty-eight rooms means we can actually know the people staying in them.”',
+    body: 'Maison Noir occupies the top four floors of a restored 1930s tower off Sowol-ro. There is no grand lobby and no tour groups — you come up in a private lift, and someone at the desk already knows your name. Most of our guests come back.',
   },
   rooms: {
     eyebrow: 'Accommodation',
@@ -172,18 +172,18 @@ const en: Content = {
     eyebrow: 'Dining',
     title: 'Table & Bar',
     intro:
-      'Two rooms, one philosophy — restraint. Ingredients led by the season, served without ceremony.',
+      'A restaurant and a bar, both open to non-guests. Book the counter a week or two ahead; the bar takes walk-ins most nights.',
     venues: [
       {
         kicker: 'The Restaurant',
         name: 'Onyx',
-        line: 'A twelve-seat counter of contemporary Korean tasting menus, changing with the moon.',
+        line: 'Twelve seats at the counter and a set Korean tasting menu that changes every few weeks with what the market has.',
         hours: 'Dinner · Tue–Sun · 18:00–22:00',
       },
       {
         kicker: 'The Bar',
         name: 'Cellar Noir',
-        line: 'Low-lit, vinyl-warmed, built around rare spirits and slow conversation.',
+        line: 'A low-lit room downstairs — old spirits, a deep whisky list, and records playing until late.',
         hours: 'Nightly · 17:00–01:00',
       },
     ],
@@ -191,7 +191,7 @@ const en: Content = {
   spa: {
     eyebrow: 'Wellness',
     title: 'Spa & Wellness',
-    body: 'A subterranean sanctuary of stone, steam and candlelight. Time slows here. Reserve a therapist for the length of your stay, or simply drift between the thermal pools.',
+    body: 'Two floors below the lobby: a thermal pool, a steam room, and four treatment rooms. Guests can book by the hour, and the pool is open from 6am if you just want the water to yourself.',
     treatmentsLabel: 'Signature treatments',
     treatments: [
       'Noir Ritual · 120 min',
@@ -203,7 +203,7 @@ const en: Content = {
   events: {
     eyebrow: 'Gatherings',
     title: 'Meetings & Events',
-    body: 'For gatherings that value discretion. Two private salons and a rooftop terrace, each with dedicated service and a kitchen at your disposal.',
+    body: 'Two private rooms and a rooftop terrace for dinners, launches, and small board meetings. Onyx handles the food; we can close a floor entirely if you need the privacy.',
     stats: [
       { value: '3', label: 'Private spaces' },
       { value: '80', label: 'Seated capacity' },
@@ -218,17 +218,17 @@ const en: Content = {
       {
         tag: 'Extended stay',
         name: 'Stay 3, Pay 2',
-        desc: 'Three nights, the third with our compliments. Includes daily breakfast at Onyx.',
+        desc: 'Book three nights and the third is on us. Breakfast at Onyx is included each morning.',
       },
       {
         tag: 'Suite',
         name: 'Suite Escape',
-        desc: 'A Signature Suite, a spa ritual for two, and a late 16:00 checkout.',
+        desc: 'A Signature Suite for two, a 60-minute treatment each, and checkout at 4pm.',
       },
       {
         tag: 'Table',
         name: 'Chef’s Table',
-        desc: 'One night with the full Onyx tasting menu and a curated wine pairing.',
+        desc: 'A room for the night plus two seats at the Onyx counter, wine included.',
       },
     ],
   },
@@ -252,7 +252,7 @@ const en: Content = {
     hours: ['Reception · 24 hours', 'Check-in · from 15:00', 'Check-out · until 12:00'],
   },
   footer: {
-    tagline: 'A quieter kind of luxury, above Seoul.',
+    tagline: 'A small hotel on the upper floors of a 1930s tower in Yongsan, Seoul.',
     contactLabel: 'Contact',
     email: 'stay@maisonnoir.seoul',
     phone: '+82 2 000 0000',
@@ -276,15 +276,15 @@ const ko: Content = {
   },
   hero: {
     kicker: 'MAISON NOIR · SEOUL',
-    headline: ['고요함이라는', '럭셔리'],
-    subtitle: '서울의 불빛 위, 은밀하고 여유로운 밤의 도심 리트리트.',
+    headline: ['서울 위,', '작은 호텔'],
+    subtitle: '용산의 1930년대 타워 상층부, 서른여덟 개의 객실. 조용하고 어둑하게, 하루쯤 사라지기 좋은 곳.',
     cta: '예약하기',
     scroll: '스크롤',
   },
   signature: {
     eyebrow: '메종에 대하여',
-    quote: '“모든 것을 경험한 여행자가, 이제 오직 고요만을 찾을 때를 위해 지었습니다.”',
-    body: '표식 없는 청동 문 너머, 1930년대에 지어진 타워의 상층부에 서른여덟 개의 객실과 스위트가 자리합니다. 화려한 로비도, 인파도 없습니다. 낮은 조도와 깊은 정적, 그리고 이름을 말하기 전에 먼저 기억하는 스태프만이 있을 뿐입니다.',
+    quote: '“일부러 작게 지었습니다. 서른여덟 개 객실이면, 머무시는 분들을 실제로 기억할 수 있으니까요.”',
+    body: '메종 누아르는 소월로 안쪽, 1930년대에 지어진 건물을 고쳐 그 위 네 개 층을 씁니다. 넓은 로비도, 단체 관광객도 없습니다. 전용 엘리베이터로 올라오면 프론트에서 이미 이름을 알고 맞이합니다. 대부분의 손님이 다시 찾아옵니다.',
   },
   rooms: {
     eyebrow: '객실',
@@ -317,18 +317,18 @@ const ko: Content = {
   dining: {
     eyebrow: '다이닝',
     title: '테이블 & 바',
-    intro: '두 개의 공간, 하나의 철학 — 절제. 계절이 이끄는 재료를, 과함 없이 담아냅니다.',
+    intro: '레스토랑과 바 모두 투숙객이 아니어도 이용하실 수 있습니다. 카운터는 1~2주 전 예약을 권하고, 바는 대부분의 저녁에 워크인이 가능합니다.',
     venues: [
       {
         kicker: '레스토랑',
         name: 'ONYX',
-        line: '달의 주기에 따라 바뀌는, 열두 석의 컨템포러리 한식 테이스팅 카운터.',
+        line: '카운터 열두 석. 그날 시장에서 들어온 재료로 몇 주마다 바뀌는 한식 코스를 냅니다.',
         hours: '디너 · 화–일 · 18:00–22:00',
       },
       {
         kicker: '바',
         name: 'CELLAR NOIR',
-        line: '낮은 조도와 바이닐의 온기, 희귀한 주류와 느린 대화를 위한 공간.',
+        line: '아래층의 어둑한 방. 오래된 주류와 깊은 위스키 리스트, 그리고 늦게까지 도는 레코드.',
         hours: '매일 · 17:00–01:00',
       },
     ],
@@ -336,7 +336,7 @@ const ko: Content = {
   spa: {
     eyebrow: '웰니스',
     title: '스파 & 웰니스',
-    body: '돌과 증기, 촛불로 이루어진 지하의 성소. 이곳에서 시간은 느리게 흐릅니다. 투숙 기간 동안 전담 테라피스트를 예약하거나, 온천 풀 사이를 유유히 오가며 머무르세요.',
+    body: '로비 아래 두 개 층에 온천 풀과 스팀룸, 트리트먼트 룸 네 개가 있습니다. 시간 단위로 예약할 수 있고, 물만 조용히 쓰고 싶다면 오전 6시부터 풀이 열려 있습니다.',
     treatmentsLabel: '시그니처 트리트먼트',
     treatments: [
       '누아르 리추얼 · 120분',
@@ -348,7 +348,7 @@ const ko: Content = {
   events: {
     eyebrow: '모임',
     title: '미팅 & 이벤트',
-    body: '프라이버시를 중요하게 여기는 모임을 위해. 두 개의 프라이빗 살롱과 루프탑 테라스, 각각 전담 서비스와 전용 키친을 갖추었습니다.',
+    body: '디너, 론칭, 소규모 회의를 위한 프라이빗 룸 두 곳과 루프탑 테라스가 있습니다. 음식은 ONYX가 맡고, 필요하다면 한 층을 통째로 비워 드립니다.',
     stats: [
       { value: '3', label: '프라이빗 공간' },
       { value: '80', label: '착석 수용' },
@@ -362,18 +362,18 @@ const ko: Content = {
     items: [
       {
         tag: '연박',
-        name: '3박 2박 요금',
-        desc: '세 번째 밤은 메종의 초대로. ONYX 조식이 매일 포함됩니다.',
+        name: '3박에 2박 요금',
+        desc: '3박을 예약하면 하룻밤은 저희가 냅니다. 매일 아침 ONYX 조식이 포함됩니다.',
       },
       {
         tag: '스위트',
         name: '스위트 이스케이프',
-        desc: '시그니처 스위트와 2인 스파 리추얼, 그리고 16:00 레이트 체크아웃.',
+        desc: '2인 시그니처 스위트, 1인당 60분 트리트먼트, 그리고 오후 4시 체크아웃.',
       },
       {
         tag: '테이블',
         name: '셰프스 테이블',
-        desc: 'ONYX 풀 테이스팅 메뉴와 큐레이션 와인 페어링이 함께하는 하룻밤.',
+        desc: '하룻밤 숙박과 ONYX 카운터 2인 좌석, 와인까지 포함한 구성.',
       },
     ],
   },
@@ -397,7 +397,7 @@ const ko: Content = {
     hours: ['리셉션 · 24시간', '체크인 · 15:00 부터', '체크아웃 · 12:00 까지'],
   },
   footer: {
-    tagline: '서울 위, 고요함이라는 럭셔리.',
+    tagline: '서울 용산, 1930년대 타워 상층부의 작은 호텔.',
     contactLabel: '문의',
     email: 'stay@maisonnoir.seoul',
     phone: '+82 2 000 0000',

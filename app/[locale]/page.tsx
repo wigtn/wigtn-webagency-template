@@ -94,7 +94,7 @@ export default async function ShowcaseHome({
       {/* Footer */}
       <footer className="border-t border-white/10 py-12 text-[#f2f1ef]/50" style={{ backgroundColor: INK }}>
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-5 px-5 text-sm sm:flex-row sm:items-center sm:px-8">
-          <WigtnLogo tone="dark" className="h-6 w-auto" />
+          <WigtnLogo className="h-9 w-auto" />
           <span>
             © {new Date().getFullYear()} WIGTN. {copy.footer.rights} · {copy.footer.madeIn}
           </span>

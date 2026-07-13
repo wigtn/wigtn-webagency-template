@@ -110,7 +110,7 @@ function Hero({ t, reduce }: { t: ReturnType<typeof getDict>; reduce: boolean })
       <div className="mx-auto max-w-[1400px]">
         <FadeIn>
           <p
-            className="mb-8 text-[12px] uppercase tracking-[0.24em]"
+            className="mb-8 max-w-full break-words text-[11px] uppercase tracking-[0.14em] sm:text-[12px] sm:tracking-[0.24em]"
             style={{ fontFamily: 'var(--sn-mono)', color: BLUE }}
           >
             ◍ {t.hero.kicker}
@@ -121,7 +121,7 @@ function Hero({ t, reduce }: { t: ReturnType<typeof getDict>; reduce: boolean })
           className="font-bold leading-[0.86] tracking-[-0.03em]"
           style={{
             fontFamily: 'var(--sn-display)',
-            fontSize: 'clamp(3.5rem, 13vw, 12rem)',
+            fontSize: 'clamp(2.3rem, 11.5vw, 12rem)',
           }}
         >
           <RiseLine reduce={reduce} delay={0.05}>

@@ -42,7 +42,7 @@ export default function ShowcaseNav({
           aria-label="WIGTN"
           className="flex items-center"
         >
-          <WigtnLogo tone="dark" priority className="h-5 w-auto sm:h-6" />
+          <WigtnLogo priority className="h-7 w-auto sm:h-8" />
         </button>
 
         <nav className="flex items-center gap-6 text-sm text-[#f2f1ef]/70">

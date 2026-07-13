@@ -40,6 +40,8 @@ export type Dict = {
     addressLabel: string;
     address: string[];
     hoursLabel: string;
+    lunchLabel: string;
+    dinnerLabel: string;
     hours: { day: string; lunch: string; dinner: string }[];
     closed: string;
     phoneLabel: string;
@@ -70,27 +72,27 @@ export type Dict = {
 const en: Dict = {
   nav: { menu: 'Menu', story: 'Story', visit: 'Visit', reserve: 'Reserve' },
   hero: {
-    kicker: 'Seasonal · Fire Kitchen',
-    title: 'Fire, salt, and the',
-    titleAccent: 'season on a plate.',
-    lead: 'A live-flame tasting kitchen in Seoul, cooking the turning of each season over embers, smoke, and hand-harvested salt.',
+    kicker: 'Seasonal · Charcoal Kitchen',
+    title: 'Charcoal, salt,',
+    titleAccent: 'and the season.',
+    lead: 'A small fine-dining room in Seoul. We cook over charcoal, season with salt, and build the course around what is good that week.',
     cta: 'Reserve a table',
     scroll: 'Scroll',
   },
   menu: {
     kicker: 'Course · Seasonal Menu',
     title: 'The Tasting',
-    intro: 'A single set journey, changing with the season. Everything meets fire or salt before it reaches you.',
+    intro: 'One set course that changes with the season. Most dishes are grilled over charcoal or finished with salt.',
     courses: [
       {
         name: 'Dinner Course',
         price: '₩120,000',
-        blurb: 'Seven movements · from ember to sweet',
+        blurb: 'Seven courses · appetiser to dessert',
       },
       {
         name: 'Lunch Course',
         price: '₩65,000',
-        blurb: 'Four movements · a lighter fire',
+        blurb: 'Four courses · a lighter midday menu',
       },
     ],
     stages: [
@@ -132,18 +134,18 @@ const en: Dict = {
   },
   story: {
     kicker: 'The Chef',
-    title: 'Cooking the season, one fire at a time.',
+    title: 'Charcoal, salt, and good timing.',
     body: [
-      'Salt & Ember began with a single grill and a belief that fire tells the truth about an ingredient. No sauces to hide behind — only smoke, salt, and timing.',
-      'Every plate is built around what the season is giving that week, cooked over live coal and finished with salt harvested by hand from the southern coast.',
+      'Salt & Ember started with one grill. We would rather let charcoal and salt do the work than cover a dish in sauce — so most of what we serve comes down to good ingredients and getting the timing right.',
+      'We pick what is best that week, cook it over live coal, and season with sea salt from the southern coast.',
     ],
     signature: 'Jae-min Seo',
-    role: 'Chef · Founder',
-    portraitTag: 'At the fire since 2014',
+    role: 'Owner · Chef',
+    portraitTag: 'At the grill since 2014',
   },
   gallery: {
     kicker: 'The Room',
-    title: 'Warmth, smoke, and quiet light.',
+    title: 'Warm fire, low light.',
     tiles: [
       { label: 'Smoked Broth', sub: 'noodles & blistered tomato', a: '#c65f3a', b: '#1a1512' },
       { label: 'Seared Scallops', sub: 'from the fire counter', a: '#d9a441', b: '#7a3b22' },
@@ -154,23 +156,23 @@ const en: Dict = {
     ],
   },
   reviews: {
-    kicker: 'Guests',
-    title: 'What the table says.',
+    kicker: 'Reviews',
+    title: 'What guests are saying.',
     items: [
       {
-        quote: 'The most honest cooking in the city. You taste the fire, the salt, and nothing pretending to be anything else.',
+        quote: 'Simple, ingredient-first cooking. The charcoal and the salt were spot on, and nothing felt fussy.',
         name: 'Hana L.',
         meta: 'Dinner Course · Spring',
         rating: 5,
       },
       {
-        quote: 'We came for a birthday and left talking about the burnt honey custard for a week. The counter seats are magic.',
+        quote: 'Came for a birthday and kept thinking about the burnt honey custard afterwards. Grab the counter seats if you can.',
         name: 'Marcus V.',
         meta: 'The Fire Counter',
         rating: 5,
       },
       {
-        quote: 'Every course felt like the season on a plate. Warm room, warmer welcome. We already re-booked.',
+        quote: 'Each course really tasted of the season. Relaxed room, friendly service — we already booked our next visit.',
         name: 'Ji-woo P.',
         meta: 'Lunch Course · Autumn',
         rating: 5,
@@ -179,10 +181,12 @@ const en: Dict = {
   },
   visit: {
     kicker: 'Location & Hours',
-    title: 'Find the fire.',
+    title: 'How to find us.',
     addressLabel: 'Address',
     address: ['14, Itaewon-ro 55ga-gil', 'Yongsan-gu, Seoul', 'Republic of Korea'],
     hoursLabel: 'Hours',
+    lunchLabel: 'Lunch',
+    dinnerLabel: 'Dinner',
     hours: [
       { day: 'Wed – Fri', lunch: '12:00 – 14:00', dinner: '18:00 – 22:00' },
       { day: 'Sat – Sun', lunch: '12:00 – 15:00', dinner: '17:30 – 22:00' },
@@ -194,8 +198,8 @@ const en: Dict = {
   },
   reservation: {
     kicker: 'Book a Table',
-    title: 'Sit close to the fire.',
-    lead: 'Seats are limited to the counter and the dining room. Send a request and we will confirm by phone.',
+    title: 'Reserve a table.',
+    lead: 'We seat guests at the counter and in the dining room only. Send a request below and we will confirm by phone.',
     dateLabel: 'Date',
     partyLabel: 'Party size',
     timeLabel: 'Time',
@@ -212,7 +216,7 @@ const en: Dict = {
     fineprint: 'This is a demo form — no reservation is actually sent.',
   },
   footer: {
-    tagline: 'A fire-and-salt seasonal kitchen. Seoul.',
+    tagline: 'Seasonal courses over charcoal and salt. Itaewon, Seoul.',
     contactLabel: 'Contact',
     followLabel: 'Follow',
     rights: 'All rights reserved.',
@@ -223,20 +227,20 @@ const en: Dict = {
 const ko: Dict = {
   nav: { menu: '메뉴', story: '이야기', visit: '방문', reserve: '예약' },
   hero: {
-    kicker: '시즌 · 불의 주방',
-    title: '불과 소금, 그리고',
-    titleAccent: '한 접시에 담은 계절.',
-    lead: '숯불과 연기, 손으로 거둔 소금으로 계절의 변화를 굽는 서울의 라이브 파이어 테이스팅 키친.',
+    kicker: '시즌 · 숯불 요리',
+    title: '숯불과 소금,',
+    titleAccent: '그리고 제철.',
+    lead: '숯불에 굽고 소금으로 간을 맞춥니다. 제철 재료로 코스를 짜는 서울의 작은 파인다이닝, SALT & EMBER.',
     cta: '테이블 예약하기',
     scroll: '아래로',
   },
   menu: {
     kicker: '코스 · 시즌 메뉴',
     title: '테이스팅 코스',
-    intro: '계절에 따라 바뀌는 하나의 여정. 모든 재료는 불 또는 소금을 거쳐 접시에 오릅니다.',
+    intro: '제철에 맞춰 코스가 바뀝니다. 대부분의 요리는 숯불에 굽거나 소금으로 마무리합니다.',
     courses: [
-      { name: '디너 코스', price: '₩120,000', blurb: '일곱 가지 흐름 · 불에서 단맛까지' },
-      { name: '런치 코스', price: '₩65,000', blurb: '네 가지 흐름 · 조금 가벼운 불' },
+      { name: '디너 코스', price: '₩120,000', blurb: '일곱 코스 · 전채부터 디저트까지' },
+      { name: '런치 코스', price: '₩65,000', blurb: '네 코스 · 가볍게 즐기는 낮 코스' },
     ],
     stages: [
       {
@@ -277,18 +281,18 @@ const ko: Dict = {
   },
   story: {
     kicker: '셰프',
-    title: '불 하나로 굽는 계절.',
+    title: '숯불과 제철 재료로.',
     body: [
-      'SALT & EMBER는 그릴 하나에서 시작했습니다. 불은 재료의 진실을 말해준다는 믿음. 숨을 소스는 없습니다 — 오직 연기와 소금, 그리고 타이밍.',
-      '모든 접시는 그 주 계절이 내어주는 것을 중심으로, 숯불 위에서 굽고 남해안에서 손으로 거둔 소금으로 마무리합니다.',
+      'SALT & EMBER는 그릴 하나로 시작했습니다. 소스로 덮기보다 숯불과 소금, 그리고 굽는 타이밍으로 재료 본연의 맛을 살리려 합니다.',
+      '그날그날 좋은 제철 재료를 골라 숯불에 굽고, 남해안에서 직접 가져온 천일염으로 간을 맞춥니다.',
     ],
     signature: '서재민',
-    role: '셰프 · 창립자',
-    portraitTag: '2014년부터 불 앞에서',
+    role: '오너 셰프',
+    portraitTag: '2014년부터 그릴 앞에서',
   },
   gallery: {
     kicker: '공간',
-    title: '따뜻함, 연기, 그리고 낮은 빛.',
+    title: '따뜻한 불, 그리고 낮은 조명.',
     tiles: [
       { label: '훈제 육수 국수', sub: '구운 방울토마토와', a: '#c65f3a', b: '#1a1512' },
       { label: '관자 구이', sub: '파이어 카운터에서', a: '#d9a441', b: '#7a3b22' },
@@ -299,23 +303,23 @@ const ko: Dict = {
     ],
   },
   reviews: {
-    kicker: '게스트',
-    title: '테이블의 이야기.',
+    kicker: '방문 후기',
+    title: '다녀간 분들의 이야기.',
     items: [
       {
-        quote: '이 도시에서 가장 정직한 요리. 불이 느껴지고, 소금이 느껴지고, 무엇도 다른 척하지 않습니다.',
+        quote: '군더더기 없이 재료 맛으로 승부하는 곳. 숯불 향과 소금 간이 딱 좋았어요.',
         name: '이하나',
         meta: '디너 코스 · 봄',
         rating: 5,
       },
       {
-        quote: '생일에 방문했는데 일주일 내내 태운 꿀 커스터드 이야기만 했어요. 카운터석은 마법입니다.',
+        quote: '생일에 갔는데 태운 꿀 커스터드가 한동안 생각났어요. 카운터석 자리 추천합니다.',
         name: 'Marcus V.',
         meta: '파이어 카운터',
         rating: 5,
       },
       {
-        quote: '모든 코스가 접시에 담긴 계절 같았어요. 따뜻한 공간, 더 따뜻한 환대. 이미 다시 예약했습니다.',
+        quote: '코스마다 제철 느낌이 잘 살아 있었어요. 공간도 편하고 응대도 친절해서 벌써 다음 예약 잡았습니다.',
         name: '박지우',
         meta: '런치 코스 · 가을',
         rating: 5,
@@ -324,10 +328,12 @@ const ko: Dict = {
   },
   visit: {
     kicker: '위치 & 시간',
-    title: '불을 찾아오세요.',
+    title: '찾아오시는 길.',
     addressLabel: '주소',
     address: ['서울 용산구 이태원로55가길 14', '용산구, 서울', '대한민국'],
     hoursLabel: '영업시간',
+    lunchLabel: '런치',
+    dinnerLabel: '디너',
     hours: [
       { day: '수 – 금', lunch: '12:00 – 14:00', dinner: '18:00 – 22:00' },
       { day: '토 – 일', lunch: '12:00 – 15:00', dinner: '17:30 – 22:00' },
@@ -339,8 +345,8 @@ const ko: Dict = {
   },
   reservation: {
     kicker: '테이블 예약',
-    title: '불 가까이 앉으세요.',
-    lead: '카운터석과 다이닝 룸만 운영합니다. 요청을 보내주시면 전화로 확정해 드립니다.',
+    title: '테이블을 예약하세요.',
+    lead: '카운터석과 다이닝 룸으로만 운영합니다. 아래로 요청을 남겨 주시면 전화로 확정해 드립니다.',
     dateLabel: '날짜',
     partyLabel: '인원',
     timeLabel: '시간',
@@ -350,7 +356,7 @@ const ko: Dict = {
     fineprint: '데모용 폼입니다 — 실제로 예약이 전송되지 않습니다.',
   },
   footer: {
-    tagline: '불과 소금의 계절 키친. 서울.',
+    tagline: '숯불과 소금으로 짓는 제철 코스. 서울 이태원.',
     contactLabel: '연락처',
     followLabel: '팔로우',
     rights: 'All rights reserved.',

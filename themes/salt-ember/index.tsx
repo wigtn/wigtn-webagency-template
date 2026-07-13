@@ -595,7 +595,7 @@ export default function SaltEmber({ locale }: { locale: Locale }) {
                         {h.day}
                       </div>
                       <div className="text-[0.86rem]" style={{ ...sans, color: MUTED }}>
-                        Lunch {h.lunch} · Dinner {h.dinner}
+                        {t.visit.lunchLabel} {h.lunch} · {t.visit.dinnerLabel} {h.dinner}
                       </div>
                     </div>
                   ))}

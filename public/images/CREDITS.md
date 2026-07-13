@@ -64,6 +64,6 @@ space `1414235077428`, g1 `1432139555190`, g2 `1607330289024`, g3 `1544025162`.
 **`images/studio-noon/`** — w1 `1547891654`, w2 `1618005182384`, w3 `1550859492`,
 w4 `1541701494587`, w5 `1620121692029`, w6 `1557682250`, studio `1634017839464`.
 
-### WIGTN logo (`images/../wigtn-logo-navy.png`)
+### WIGTN logo (`images/../wigtn-logo-white-trim.png`)
 
 WIGTN brand mark — owned by WIGTN.
