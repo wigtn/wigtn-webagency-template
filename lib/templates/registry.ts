@@ -51,6 +51,21 @@ export const TEMPLATES: TemplateMeta[] = [
     engine: 'theme',
   },
   {
+    slug: 'block-yard',
+    category: 'workspace',
+    vertical: { ko: '워크클럽 · 커뮤니티 스페이스', en: 'Work Club · Community Space' },
+    brandName: 'BLOCK YARD',
+    tagline: {
+      ko: '일하고, 배우고, 만나는 동네 워크클럽.',
+      en: 'A neighborhood work club for desks, talks, and after-hours ideas.',
+    },
+    accent: '#00b453',
+    row: { bg: '#fff8d7', text: '#101010', muted: '#56513c' },
+    thumbnail: '/images/block-yard/hero.jpg',
+    typeface: 'Space Grotesk · Noto Sans KR',
+    engine: 'theme',
+  },
+  {
     slug: 'studio-noon',
     category: 'creative',
     vertical: { ko: '크리에이터 · 포트폴리오', en: 'Creator · Portfolio' },
@@ -96,4 +111,5 @@ export const CATEGORY_LABEL: Record<TemplateMeta['category'], { ko: string; en: 
   lodging: { ko: '숙박', en: 'Lodging' },
   fnb: { ko: '다이닝', en: 'F&B' },
   creative: { ko: '크리에이티브', en: 'Creative' },
+  workspace: { ko: '워크스페이스', en: 'Workspace' },
 };

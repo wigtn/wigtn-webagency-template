@@ -1,14 +1,15 @@
 import type { Locale } from '@/i18n/routing';
 
 /** 업종 카테고리 — JSON-LD 타입·갤러리 필터 라벨 파생에 사용 */
-export type TemplateCategory = 'lodging' | 'fnb' | 'creative';
+export type TemplateCategory = 'lodging' | 'fnb' | 'creative' | 'workspace';
 
 export type TemplateSlug =
   | 'stay-heaven'
   | 'maison-noir'
   | 'onjae'
   | 'salt-ember'
-  | 'studio-noon';
+  | 'studio-noon'
+  | 'block-yard';
 
 /**
  * 쇼케이스 갤러리 + 라우팅에 쓰이는 템플릿 메타데이터.

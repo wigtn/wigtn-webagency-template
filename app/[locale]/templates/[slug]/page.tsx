@@ -12,6 +12,7 @@ const THEME_LOADERS: Partial<Record<TemplateSlug, () => Promise<{ default: React
   onjae: () => import('@/themes/onjae'),
   'salt-ember': () => import('@/themes/salt-ember'),
   'studio-noon': () => import('@/themes/studio-noon'),
+  'block-yard': () => import('@/themes/block-yard'),
 };
 
 export function generateStaticParams() {
