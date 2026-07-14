@@ -32,10 +32,12 @@ function SectionTitle({
   label,
   title,
   align = 'left',
+  tone = 'default',
 }: {
   label: string;
   title: string;
   align?: 'left' | 'center';
+  tone?: 'default' | 'membership';
 }) {
   return (
     <FadeIn>
@@ -45,7 +47,11 @@ function SectionTitle({
           className="mt-6 text-[clamp(2.4rem,6.4vw,5.8rem)] font-black leading-[1.04]"
           style={display}
         >
-          {title}
+          {tone === 'membership' ? (
+            <span className="text-[#fff8d7] drop-shadow-[3px_3px_0_#101010]">{title}</span>
+          ) : (
+            title
+          )}
         </h2>
       </div>
     </FadeIn>
@@ -135,7 +141,7 @@ export default function BlockYard({ locale }: { locale: Locale }) {
           >
             <Sticker>{t.hero.kicker}</Sticker>
             <h1
-              className="mt-7 whitespace-pre-line text-[clamp(3.6rem,10.5vw,9.6rem)] font-black leading-[0.98]"
+              className="mt-7 whitespace-pre-line text-[clamp(3.25rem,9.8vw,9.2rem)] font-black leading-[0.99]"
               style={display}
             >
               {t.hero.title}
@@ -266,24 +272,24 @@ export default function BlockYard({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section id="membership" className="border-b-2 border-black bg-[#00b453] px-4 py-16 sm:px-6 lg:py-24">
-        <div className="mx-auto max-w-[1440px]">
-          <SectionTitle label={t.membership.label} title={t.membership.title} align="center" />
-          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+      <section id="membership" className="border-b-2 border-black bg-[#00b453] px-5 py-16 sm:px-8 lg:py-24">
+        <div className="mx-auto max-w-[1320px]">
+          <SectionTitle label={t.membership.label} title={t.membership.title} align="center" tone="membership" />
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
             {t.membership.plans.map((plan, i) => (
               <FadeIn key={plan.name} delay={i * 0.05}>
                 <motion.article
                   whileHover={reduce ? undefined : { y: -8, boxShadow: '12px 12px 0 #101010' }}
                   className="flex h-full flex-col border-2 border-black bg-[#fff8d7] shadow-[8px_8px_0_#101010]"
                 >
-                  <div className="border-b-2 border-black p-5">
-                    <div className="text-[13px] font-black uppercase tracking-[0.1em]" style={display}>
+                  <div className="border-b-2 border-black bg-[#fffbe5] p-6">
+                    <div className="inline-flex border-2 border-black bg-white px-2.5 py-1 text-[12px] font-black uppercase tracking-[0.1em] shadow-[2px_2px_0_#101010]" style={display}>
                       {plan.name}
                     </div>
-                    <div className="mt-4 break-keep text-[clamp(2.1rem,4.2vw,3.7rem)] font-black leading-[1.02]" style={display}>
+                    <div className="mt-5 break-keep text-[clamp(2.35rem,4.8vw,4.2rem)] font-black leading-[0.98] text-[#00a24b]" style={display}>
                       {plan.price}
                     </div>
-                    <p className="mt-3 text-[15px] font-bold">{plan.note}</p>
+                    <p className="mt-3 text-[15px] font-black text-[#101010]/80">{plan.note}</p>
                   </div>
                   <ul className="grow">
                     {plan.perks.map((perk) => (
@@ -300,9 +306,9 @@ export default function BlockYard({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section id="calendar" className="grid border-b-2 border-black lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="border-b-2 border-black bg-white px-4 py-16 sm:px-6 lg:border-b-0 lg:border-r-2 lg:py-24">
-          <div className="mx-auto max-w-[640px] lg:ml-auto lg:mr-12">
+      <section id="calendar" className="grid border-b-2 border-black lg:grid-cols-[0.92fr_1.08fr]">
+        <div className="border-b-2 border-black bg-white px-5 py-16 sm:px-8 lg:border-b-0 lg:border-r-2 lg:py-24">
+          <div className="mx-auto max-w-[600px] lg:ml-auto lg:mr-16">
             <SectionTitle label={t.calendar.label} title={t.calendar.title} />
             <p className="mt-7 text-[18px] font-bold leading-relaxed">{t.calendar.body}</p>
             <motion.div
@@ -313,8 +319,8 @@ export default function BlockYard({ locale }: { locale: Locale }) {
             </motion.div>
           </div>
         </div>
-        <div className="bg-[#e6f2f7] px-4 py-16 sm:px-6 lg:py-24">
-          <div className="mx-auto max-w-[760px] lg:ml-12">
+        <div className="bg-[#e6f2f7] px-5 py-16 sm:px-8 lg:py-24">
+          <div className="mx-auto max-w-[690px] lg:ml-16">
             {t.calendar.events.map((event, i) => (
               <FadeIn key={event.title} delay={i * 0.05}>
                 <motion.article
