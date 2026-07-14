@@ -13,7 +13,7 @@ const serif = { fontFamily: 'var(--mn-serif)' } as const;
 
 function Eyebrow({ children }: { children: string }) {
   return (
-    <p className="flex items-center gap-3 text-[11px] uppercase tracking-[0.36em] text-[#b89a72]" style={sans}>
+    <p className="flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.36em] text-[#d2b58a]" style={sans}>
       <span className="h-px w-8 bg-[#b89a72]/50" />
       {children}
     </p>
@@ -40,7 +40,7 @@ export function Signature({ data }: { data: Content['signature'] }) {
           <FadeIn delay={0.15}>
             <div className="md:pt-4">
               <span className="mb-7 block h-px w-full bg-gradient-to-r from-[#b89a72]/50 to-transparent" />
-              <p className="text-[15px] font-light leading-[1.85] text-[#8f887f]" style={sans}>
+              <p className="text-[15px] font-light leading-[1.85] text-[#c6bcb0]" style={sans}>
                 {data.body}
               </p>
             </div>
@@ -89,7 +89,7 @@ export function Rooms({ data }: { data: Content['rooms'] }) {
                     <h3 className="text-[24px] font-normal leading-tight text-[#f1ece4] md:text-[26px]" style={serif}>
                       {room.name}
                     </h3>
-                    <p className="mt-1 text-[12px] uppercase tracking-[0.2em] text-[#8f887f]" style={sans}>
+                    <p className="mt-1 text-[12px] font-medium uppercase tracking-[0.2em] text-[#b8afa4]" style={sans}>
                       {room.size} · {room.view}
                     </p>
                   </div>
@@ -98,7 +98,7 @@ export function Rooms({ data }: { data: Content['rooms'] }) {
                 {/* features */}
                 <ul className="flex flex-wrap gap-x-8 gap-y-2 md:flex-col md:gap-y-2.5" style={sans}>
                   {room.features.map((f) => (
-                    <li key={f} className="flex items-center gap-3 text-[14px] font-light text-[#8f887f]">
+                    <li key={f} className="flex items-center gap-3 text-[14px] font-light text-[#c6bcb0]">
                       <span className="h-1 w-1 rounded-full bg-[#b89a72]/70" />
                       {f}
                     </li>
@@ -108,7 +108,7 @@ export function Rooms({ data }: { data: Content['rooms'] }) {
                 {/* rate */}
                 <div className="flex items-center gap-3 md:flex-col md:items-end md:gap-2 md:text-right">
                   <span
-                    className="inline-flex items-baseline rounded-[3px] border border-[#b89a72]/25 bg-[#08080a]/90 px-3.5 py-2 text-[19px] font-medium tabular-nums text-[#b89a72]"
+                    className="inline-flex items-baseline rounded-[3px] border border-[#d2b58a]/35 bg-[#08080a]/90 px-3.5 py-2 text-[19px] font-bold tabular-nums text-[#dfc391]"
                     style={{
                       fontFamily: 'var(--mn-sans)',
                       fontFeatureSettings: '"lnum" 1, "tnum" 1',
@@ -116,7 +116,7 @@ export function Rooms({ data }: { data: Content['rooms'] }) {
                   >
                     {room.rate}
                   </span>
-                  <span className="text-[11px] uppercase tracking-[0.2em] text-[#8f887f]" style={sans}>
+                  <span className="text-[11px] font-medium uppercase tracking-[0.2em] text-[#b8afa4]" style={sans}>
                     {data.perNight}
                   </span>
                 </div>
@@ -140,7 +140,7 @@ export function Dining({ data }: { data: Content['dining'] }) {
           <h2 className="mt-6 max-w-[16ch] text-[clamp(2.4rem,6vw,4.5rem)] font-light leading-none text-[#f1ece4]" style={serif}>
             {data.title}
           </h2>
-          <p className="mt-7 max-w-[52ch] text-[15px] font-light leading-relaxed text-[#8f887f]" style={sans}>
+          <p className="mt-7 max-w-[52ch] text-[15px] font-light leading-relaxed text-[#c6bcb0]" style={sans}>
             {data.intro}
           </p>
         </FadeIn>
@@ -158,16 +158,16 @@ export function Dining({ data }: { data: Content['dining'] }) {
                 />
                 <span className="absolute inset-0 bg-gradient-to-t from-[#0a0a0b] via-[#0a0a0b]/75 to-[#0a0a0b]/20" />
                 <div className="relative">
-                  <p className="text-[11px] uppercase tracking-[0.3em] text-[#b89a72]" style={sans}>
+                  <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-[#d2b58a]" style={sans}>
                     {v.kicker}
                   </p>
                   <h3 className="mt-3 text-[38px] font-light leading-none text-[#f1ece4]" style={serif}>
                     {v.name}
                   </h3>
-                  <p className="mt-5 max-w-[38ch] text-[14px] font-light leading-relaxed text-[#c6bcb0]" style={sans}>
+                  <p className="mt-5 max-w-[38ch] text-[14px] font-light leading-relaxed text-[#ded3c4]" style={sans}>
                     {v.line}
                   </p>
-                  <p className="mt-6 border-t border-white/12 pt-5 text-[12px] uppercase tracking-[0.18em] text-[#aaa197]" style={sans}>
+                  <p className="mt-6 border-t border-white/12 pt-5 text-[12px] font-medium uppercase tracking-[0.18em] text-[#c6bcb0]" style={sans}>
                     {v.hours}
                   </p>
                 </div>
@@ -195,22 +195,25 @@ export function Spa({ data }: { data: Content['spa'] }) {
             <h2 className="mt-6 text-[clamp(2.4rem,6vw,4.5rem)] font-light leading-[0.98] text-[#f1ece4]" style={serif}>
               {data.title}
             </h2>
-            <p className="mt-8 max-w-[44ch] text-[15px] font-light leading-[1.85] text-[#8f887f]" style={sans}>
+            <p className="mt-8 max-w-[44ch] text-[15px] font-light leading-[1.85] text-[#d4cabd]" style={sans}>
               {data.body}
             </p>
           </FadeIn>
           <FadeIn delay={0.12}>
             <div className="md:pt-16">
-              <p className="text-[11px] uppercase tracking-[0.3em] text-[#b89a72]" style={sans}>
+              <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-[#d2b58a]" style={sans}>
                 {data.treatmentsLabel}
               </p>
               <ul className="mt-6">
-                {data.treatments.map((t) => (
+                {data.treatments.map((t, i) => (
                   <li
                     key={t}
-                    className="flex items-baseline justify-between gap-6 border-b border-[#b89a72]/12 py-4 text-[16px] font-light text-[#f1ece4]"
-                    style={serif}
+                    className="flex items-baseline gap-5 border-b border-[#b89a72]/18 py-4 text-[16px] font-medium text-[#f6efe5]"
+                    style={sans}
                   >
+                    <span className="min-w-8 text-[11px] uppercase tracking-[0.2em] text-[#d2b58a]">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
                     {t}
                   </li>
                 ))}
@@ -246,10 +249,10 @@ export function Events({ data }: { data: Content['events'] }) {
             <h2 className="mt-6 max-w-[14ch] text-[clamp(2.4rem,6vw,4.5rem)] font-light leading-none text-[#f1ece4]" style={serif}>
               {data.title}
             </h2>
-            <p className="mt-8 max-w-[46ch] text-[15px] font-light leading-relaxed text-[#8f887f]" style={sans}>
+            <p className="mt-8 max-w-[46ch] text-[15px] font-light leading-relaxed text-[#c6bcb0]" style={sans}>
               {data.body}
             </p>
-            <p className="mt-10 inline-flex items-center gap-2 text-[13px] uppercase tracking-[0.16em] text-[#b89a72]" style={sans}>
+            <p className="mt-10 inline-flex items-center gap-2 text-[13px] font-medium uppercase tracking-[0.16em] text-[#d2b58a]" style={sans}>
               {data.inquiry}
             </p>
           </FadeIn>
@@ -260,7 +263,7 @@ export function Events({ data }: { data: Content['events'] }) {
                   <p className="text-[clamp(2.2rem,5vw,3.4rem)] font-light leading-none text-[#b89a72]" style={serif}>
                     {s.value}
                   </p>
-                  <p className="mt-4 text-[10px] uppercase tracking-[0.16em] leading-tight text-[#8f887f]" style={sans}>
+                  <p className="mt-4 text-[10px] font-medium uppercase tracking-[0.16em] leading-tight text-[#b8afa4]" style={sans}>
                     {s.label}
                   </p>
                 </div>
@@ -289,18 +292,18 @@ export function Offers({ data }: { data: Content['offers'] }) {
             <FadeIn key={o.name} delay={i * 0.08}>
               <div className="group flex h-full flex-col border border-[#b89a72]/14 p-8 transition-[border-color,transform,background-color] duration-500 hover:-translate-y-1 hover:border-[#b89a72]/40 hover:bg-[#111113]">
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] uppercase tracking-[0.28em] text-[#b89a72]" style={sans}>
+                  <span className="text-[10px] font-medium uppercase tracking-[0.28em] text-[#d2b58a]" style={sans}>
                     {o.tag}
                   </span>
                   <ArrowUpRight
                     size={18}
-                    className="text-[#8f887f] transition-all duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#b89a72]"
+                    className="text-[#b8afa4] transition-all duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#d2b58a]"
                   />
                 </div>
                 <h3 className="mt-10 text-[28px] font-light leading-tight text-[#f1ece4]" style={serif}>
                   {o.name}
                 </h3>
-                <p className="mt-4 text-[14px] font-light leading-relaxed text-[#8f887f]" style={sans}>
+                <p className="mt-4 text-[14px] font-light leading-relaxed text-[#c6bcb0]" style={sans}>
                   {o.desc}
                 </p>
               </div>
@@ -386,7 +389,7 @@ export function Access({ data }: { data: Content['access'] }) {
               {data.address.map((line, i) => (
                 <p
                   key={i}
-                  className={i === 0 ? 'text-[20px] font-normal text-[#f1ece4]' : 'text-[15px] font-light text-[#8f887f]'}
+                  className={i === 0 ? 'text-[20px] font-normal text-[#f1ece4]' : 'text-[15px] font-light text-[#c6bcb0]'}
                   style={i === 0 ? serif : sans}
                 >
                   {line}
@@ -395,12 +398,12 @@ export function Access({ data }: { data: Content['access'] }) {
             </address>
           </FadeIn>
           <FadeIn delay={0.08}>
-            <p className="text-[11px] uppercase tracking-[0.3em] text-[#b89a72]" style={sans}>
+            <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-[#d2b58a]" style={sans}>
               {data.directionsLabel}
             </p>
             <ul className="mt-5 space-y-3" style={sans}>
               {data.directions.map((d) => (
-                <li key={d} className="flex gap-3 text-[14px] font-light leading-snug text-[#8f887f]">
+                <li key={d} className="flex gap-3 text-[14px] font-light leading-snug text-[#c6bcb0]">
                   <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[#b89a72]/70" />
                   {d}
                 </li>
@@ -408,12 +411,12 @@ export function Access({ data }: { data: Content['access'] }) {
             </ul>
           </FadeIn>
           <FadeIn delay={0.16}>
-            <p className="text-[11px] uppercase tracking-[0.3em] text-[#b89a72]" style={sans}>
+            <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-[#d2b58a]" style={sans}>
               {data.hoursLabel}
             </p>
             <ul className="mt-5 space-y-3" style={sans}>
               {data.hours.map((h) => (
-                <li key={h} className="text-[14px] font-light text-[#8f887f]">
+                <li key={h} className="text-[14px] font-light text-[#c6bcb0]">
                   {h}
                 </li>
               ))}
@@ -435,24 +438,24 @@ export function Footer({ data }: { data: Content['footer'] }) {
             <p className="text-[18px] font-medium uppercase tracking-[0.4em] text-[#f1ece4]" style={sans}>
               Maison<span className="text-[#b89a72]"> Noir</span>
             </p>
-            <p className="mt-6 max-w-[34ch] text-[14px] font-light leading-relaxed text-[#8f887f]" style={serif}>
+            <p className="mt-6 max-w-[34ch] text-[14px] font-light leading-relaxed text-[#c6bcb0]" style={serif}>
               {data.tagline}
             </p>
           </div>
           <div style={sans}>
-            <p className="text-[11px] uppercase tracking-[0.3em] text-[#b89a72]">{data.contactLabel}</p>
-            <a href={`mailto:${data.email}`} className="mt-5 block text-[14px] text-[#8f887f] transition-colors hover:text-[#f1ece4]">
+            <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-[#d2b58a]">{data.contactLabel}</p>
+            <a href={`mailto:${data.email}`} className="mt-5 block text-[14px] text-[#c6bcb0] transition-colors hover:text-[#f1ece4]">
               {data.email}
             </a>
-            <a href={`tel:${data.phone.replace(/\s/g, '')}`} className="mt-2 block text-[14px] text-[#8f887f] transition-colors hover:text-[#f1ece4]">
+            <a href={`tel:${data.phone.replace(/\s/g, '')}`} className="mt-2 block text-[14px] text-[#c6bcb0] transition-colors hover:text-[#f1ece4]">
               {data.phone}
             </a>
           </div>
           <div style={sans}>
-            <p className="text-[11px] uppercase tracking-[0.3em] text-[#b89a72]">{data.socialLabel}</p>
+            <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-[#d2b58a]">{data.socialLabel}</p>
             <div className="mt-5 flex flex-col gap-2">
               {data.socials.map((s) => (
-                <a key={s} href="#top" className="text-[14px] text-[#8f887f] transition-colors hover:text-[#f1ece4]">
+                <a key={s} href="#top" className="text-[14px] text-[#c6bcb0] transition-colors hover:text-[#f1ece4]">
                   {s}
                 </a>
               ))}
@@ -461,7 +464,7 @@ export function Footer({ data }: { data: Content['footer'] }) {
         </div>
 
         <div
-          className="mt-16 flex flex-col gap-4 border-t border-white/6 pt-8 text-[12px] text-[#8f887f] md:flex-row md:items-center md:justify-between"
+          className="mt-16 flex flex-col gap-4 border-t border-white/6 pt-8 text-[12px] text-[#b8afa4] md:flex-row md:items-center md:justify-between"
           style={sans}
         >
           <p>{data.rights}</p>
@@ -469,7 +472,7 @@ export function Footer({ data }: { data: Content['footer'] }) {
             href="https://wigtn.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="uppercase tracking-[0.2em] text-[#8f887f] transition-colors hover:text-[#b89a72]"
+            className="uppercase tracking-[0.2em] text-[#b8afa4] transition-colors hover:text-[#d2b58a]"
           >
             {data.credit}
           </a>

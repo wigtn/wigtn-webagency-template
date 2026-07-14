@@ -44,7 +44,7 @@ export default function Hero({ hero }: { hero: Content['hero'] }) {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'linear-gradient(100deg, rgba(11,11,12,0.82) 0%, rgba(11,11,12,0.72) 42%, rgba(11,11,12,0.42) 64%, rgba(11,11,12,0.10) 86%, rgba(11,11,12,0) 100%)',
+            'linear-gradient(100deg, rgba(11,11,12,0.88) 0%, rgba(11,11,12,0.76) 42%, rgba(11,11,12,0.48) 64%, rgba(11,11,12,0.12) 86%, rgba(11,11,12,0) 100%)',
         }}
       />
       <div
@@ -72,7 +72,7 @@ export default function Hero({ hero }: { hero: Content['hero'] }) {
       <div className="relative z-10 mx-auto flex w-full max-w-[1200px] flex-1 flex-col justify-center px-6 pt-28 md:px-10">
         <motion.p
           {...rise(0.1)}
-          className="text-[11px] uppercase tracking-[0.34em] text-[#b89a72] md:tracking-[0.42em]"
+          className="text-[11px] font-medium uppercase tracking-[0.34em] text-[#d2b58a] md:tracking-[0.42em]"
           style={{ fontFamily: 'var(--mn-sans)' }}
         >
           {hero.kicker}
@@ -80,14 +80,14 @@ export default function Hero({ hero }: { hero: Content['hero'] }) {
 
         <motion.h1
           {...rise(0.24)}
-          className="mt-8 max-w-[12ch] text-[clamp(3rem,8.5vw,7.2rem)] font-light leading-[1.02] text-[#f1ece4]"
+          className="mt-8 max-w-[12ch] text-[clamp(3rem,8.5vw,7.2rem)] font-light leading-[1.02] text-[#fff6ea]"
           style={{ fontFamily: 'var(--mn-serif)', textShadow: '0 2px 40px rgba(0,0,0,0.6)' }}
         >
           {hero.headline[0]}
           <br />
           <span
             className="font-normal"
-            style={{ color: '#f1ece4', textShadow: '0 2px 30px rgba(0,0,0,0.7)' }}
+            style={{ color: '#fff6ea', textShadow: '0 2px 30px rgba(0,0,0,0.7)' }}
           >
             {hero.headline[1]}
           </span>
@@ -95,7 +95,7 @@ export default function Hero({ hero }: { hero: Content['hero'] }) {
 
         <motion.p
           {...rise(0.42)}
-          className="mt-9 max-w-[46ch] text-[15px] font-light leading-relaxed text-[#d8d0c3] md:text-[17px]"
+          className="mt-9 max-w-[46ch] text-[15px] font-light leading-relaxed text-[#eee4d7] md:text-[17px]"
           style={{ fontFamily: 'var(--mn-sans)', textShadow: '0 1px 20px rgba(0,0,0,0.7)' }}
         >
           {hero.subtitle}
@@ -104,7 +104,7 @@ export default function Hero({ hero }: { hero: Content['hero'] }) {
         <motion.div {...rise(0.56)} className="mt-11 flex items-center gap-5">
           <a
             href="#contact"
-            className="inline-flex items-center gap-3 border border-[#b89a72]/45 px-9 py-4 text-[12px] uppercase tracking-[0.28em] text-[#b89a72] transition-colors duration-300 hover:bg-[#b89a72] hover:text-[#0e0e0f]"
+            className="inline-flex items-center gap-3 border border-[#d2b58a]/55 px-9 py-4 text-[12px] font-medium uppercase tracking-[0.28em] text-[#d2b58a] transition-colors duration-300 hover:bg-[#d2b58a] hover:text-[#0e0e0f]"
             style={{ fontFamily: 'var(--mn-sans)' }}
           >
             {hero.cta}
@@ -125,7 +125,7 @@ export default function Hero({ hero }: { hero: Content['hero'] }) {
           style={{ background: 'linear-gradient(180deg, rgba(200,169,106,0.7), transparent)', transformOrigin: 'top' }}
         />
         <span
-          className="text-[10px] uppercase tracking-[0.3em] text-[#9f9485] transition-colors hover:text-[#b89a72]"
+          className="text-[10px] font-medium uppercase tracking-[0.3em] text-[#c6bcb0] transition-colors hover:text-[#d2b58a]"
           style={{ fontFamily: 'var(--mn-sans)' }}
         >
           {hero.scroll}
