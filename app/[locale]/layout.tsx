@@ -40,9 +40,9 @@ export function generateStaticParams() {
 
 const STUDIO_NAME = 'WIGTN';
 const STUDIO_DESC_KO =
-  'WIGTN은 숙박·다이닝·개인 브랜드까지, 업종마다 다른 톤으로 설계하는 작은 웹 스튜디오입니다. 다섯 개의 템플릿으로 방식을 증명합니다.';
+  'WIGTN은 숙박·다이닝·워크스페이스·개인 브랜드까지, 업종마다 다른 톤으로 설계하는 작은 웹 스튜디오입니다. 여섯 개의 템플릿으로 방식을 증명합니다.';
 const STUDIO_DESC_EN =
-  'WIGTN is a small web studio designing each brand in its own tone — from stays to dining to personal brands. Five templates prove the approach.';
+  'WIGTN is a small web studio designing each brand in its own tone — from stays to dining to workspaces to personal brands. Six templates prove the approach.';
 
 export async function generateMetadata({
   params,
