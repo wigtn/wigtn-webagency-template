@@ -18,12 +18,12 @@ const ko: ShowcaseCopy = {
   hero: {
     kicker: 'WIGTN — WEB STUDIO',
     title: '브랜드의 결을\n웹으로 짓습니다.',
-    lead: '숙소, 식당, 개인 브랜드까지. 아래 다섯 개, 직접 눌러 보세요.',
+    lead: '숙소, 식당, 워크클럽, 개인 브랜드까지. 아래 여섯 개, 직접 눌러 보세요.',
     scroll: '템플릿 보기',
   },
   gallery: {
-    eyebrow: 'TEMPLATES — 05',
-    heading: '직접 만든 다섯 개의 템플릿.',
+    eyebrow: 'TEMPLATES — 06',
+    heading: '직접 만든 여섯 개의 템플릿.',
     preview: '미리보기',
   },
   footer: { rights: 'All rights reserved.', madeIn: 'Seoul' },
@@ -34,12 +34,12 @@ const en: ShowcaseCopy = {
   hero: {
     kicker: 'WIGTN — WEB STUDIO',
     title: 'We build the\ntexture of a brand.',
-    lead: 'Stays, restaurants, personal brands. Have a look at the five below.',
+    lead: 'Stays, restaurants, work clubs, personal brands. Have a look at the six below.',
     scroll: 'See templates',
   },
   gallery: {
-    eyebrow: 'TEMPLATES — 05',
-    heading: 'Five templates we made ourselves.',
+    eyebrow: 'TEMPLATES — 06',
+    heading: 'Six templates we made ourselves.',
     preview: 'Preview',
   },
   footer: { rights: 'All rights reserved.', madeIn: 'Seoul' },

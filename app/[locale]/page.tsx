@@ -39,11 +39,13 @@ export default async function ShowcaseHome({
   const loc = locale as Locale;
   const lang = loc === 'ko' ? 'ko' : 'en';
   const copy = getShowcaseCopy(loc);
+  const templateCount = String(TEMPLATES.length).padStart(2, '0');
+  const categoryCount = String(new Set(TEMPLATES.map((t) => t.category)).size).padStart(2, '0');
 
   const stats = [
-    { n: '05', l: lang === 'ko' ? '템플릿' : 'Templates' },
+    { n: templateCount, l: lang === 'ko' ? '템플릿' : 'Templates' },
     { n: '04', l: lang === 'ko' ? '개국어' : 'Languages' },
-    { n: '03', l: lang === 'ko' ? '업종' : 'Industries' },
+    { n: categoryCount, l: lang === 'ko' ? '업종' : 'Industries' },
   ];
 
   return (
@@ -80,7 +82,7 @@ export default async function ShowcaseHome({
         </div>
       </section>
 
-      {/* 에디토리얼 로우 5행 (각 템플릿 고유 톤 유지) */}
+      {/* 에디토리얼 로우 (각 템플릿 고유 톤 유지) */}
       <div>
         {TEMPLATES.map((meta, i) => (
           <TemplateRow key={meta.slug} meta={meta} locale={loc} index={i} previewLabel={copy.gallery.preview} />
