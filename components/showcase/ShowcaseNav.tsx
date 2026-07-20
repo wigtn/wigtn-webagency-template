@@ -49,6 +49,9 @@ export default function ShowcaseNav({
           <button onClick={() => jump('templates')} className="hidden transition-colors hover:text-[#f2f1ef] sm:inline">
             {copy.nav.work}
           </button>
+          <button onClick={() => jump('mobile')} className="hidden transition-colors hover:text-[#f2f1ef] sm:inline">
+            {copy.nav.mobile}
+          </button>
           <a href="mailto:contact@wigtn.com" className="transition-colors hover:text-[#f2f1ef]">
             {copy.nav.contact}
           </a>
