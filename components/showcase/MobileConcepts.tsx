@@ -607,7 +607,13 @@ export default function MobileConcepts({ copy, locale }: { copy: ShowcaseCopy; l
   const active = MOBILE_CONCEPTS.find((concept) => concept.id === activeId) ?? MOBILE_CONCEPTS[MOBILE_CONCEPTS.length - 1];
 
   useEffect(() => {
-    themeStripRef.current?.querySelector(`[data-concept="${activeId}"]`)?.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+    const strip = themeStripRef.current;
+    const chip = strip?.querySelector<HTMLElement>(`[data-concept="${activeId}"]`);
+    if (!strip || !chip) return;
+    // scrollBy on the strip only — scrollIntoView would scroll the document to this section on mount.
+    const stripBox = strip.getBoundingClientRect();
+    const chipBox = chip.getBoundingClientRect();
+    strip.scrollBy({ left: chipBox.left + chipBox.width / 2 - (stripBox.left + stripBox.width / 2), behavior: 'smooth' });
   }, [activeId]);
 
   const chooseConcept = (id: string) => {
