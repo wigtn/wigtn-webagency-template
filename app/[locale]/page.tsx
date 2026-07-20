@@ -7,6 +7,7 @@ import { getShowcaseCopy } from '@/lib/showcase-content';
 import ShowcaseNav from '@/components/showcase/ShowcaseNav';
 import TemplateRow from '@/components/showcase/TemplateRow';
 import WigtnLogo from '@/components/showcase/WigtnLogo';
+import MobileConcepts from '@/components/showcase/MobileConcepts';
 
 const grotesk = Space_Grotesk({ subsets: ['latin'], display: 'swap' });
 
@@ -40,12 +41,11 @@ export default async function ShowcaseHome({
   const lang = loc === 'ko' ? 'ko' : 'en';
   const copy = getShowcaseCopy(loc);
   const templateCount = String(TEMPLATES.length).padStart(2, '0');
-  const categoryCount = String(new Set(TEMPLATES.map((t) => t.category)).size).padStart(2, '0');
 
   const stats = [
     { n: templateCount, l: lang === 'ko' ? '템플릿' : 'Templates' },
+    { n: '06', l: lang === 'ko' ? '모바일' : 'Mobile' },
     { n: '04', l: lang === 'ko' ? '개국어' : 'Languages' },
-    { n: categoryCount, l: lang === 'ko' ? '업종' : 'Industries' },
   ];
 
   return (
@@ -54,11 +54,6 @@ export default async function ShowcaseHome({
 
       {/* 컴팩트 인트로 — 큰 히어로 없이 바로 템플릿으로 */}
       <section id="templates" className="relative mx-auto max-w-6xl scroll-mt-16 px-5 pb-4 pt-28 sm:px-8 sm:pt-32">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute right-[-6%] top-0 h-[320px] w-[320px] rounded-full"
-          style={{ background: P265, filter: 'blur(200px)', opacity: 0.18 }}
-        />
         <div className="relative flex flex-col gap-6 border-b border-white/10 pb-8 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
             <p className="text-xs tracking-[0.28em]" style={{ color: P265 }}>
@@ -88,6 +83,8 @@ export default async function ShowcaseHome({
           <TemplateRow key={meta.slug} meta={meta} locale={loc} index={i} previewLabel={copy.gallery.preview} />
         ))}
       </div>
+
+      <MobileConcepts copy={copy} locale={loc} />
 
       {/* Footer */}
       <footer className="border-t border-white/10 py-12 text-[#f2f1ef]/50" style={{ backgroundColor: INK }}>
