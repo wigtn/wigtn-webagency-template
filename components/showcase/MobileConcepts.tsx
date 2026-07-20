@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type WheelEvent } from 'react';
 import {
   Activity,
   ArrowUpRight,
@@ -14,6 +14,7 @@ import {
   Camera,
   Car,
   Check,
+  ChevronLeft,
   ChevronRight,
   HeartPulse,
   Headphones,
@@ -534,6 +535,9 @@ function PhoneCoverflow({ concept, locale, screenIndex, onChange }: { concept: M
   const go = (delta: number) => onChange((screenIndex + delta + count) % count, delta);
   const slots = [-1, 0, 1];
   const [wide, setWide] = useState(false);
+  const wheelDeltaRef = useRef(0);
+  const wheelLockedRef = useRef(false);
+  const wheelResetRef = useRef<number | null>(null);
 
   useEffect(() => {
     const query = window.matchMedia('(min-width: 640px)');
@@ -543,11 +547,42 @@ function PhoneCoverflow({ concept, locale, screenIndex, onChange }: { concept: M
     return () => query.removeEventListener('change', update);
   }, []);
 
+  useEffect(() => () => {
+    if (wheelResetRef.current) window.clearTimeout(wheelResetRef.current);
+  }, []);
+
+  const handleWheel = (event: WheelEvent<HTMLDivElement>) => {
+    if (Math.abs(event.deltaX) <= Math.abs(event.deltaY) * 0.65) return;
+    event.preventDefault();
+    if (wheelLockedRef.current) return;
+
+    wheelDeltaRef.current += event.deltaX;
+    if (wheelResetRef.current) window.clearTimeout(wheelResetRef.current);
+    wheelResetRef.current = window.setTimeout(() => { wheelDeltaRef.current = 0; }, 140);
+
+    if (Math.abs(wheelDeltaRef.current) < 42) return;
+    const delta = wheelDeltaRef.current > 0 ? 1 : -1;
+    wheelDeltaRef.current = 0;
+    wheelLockedRef.current = true;
+    go(delta);
+    wheelResetRef.current = window.setTimeout(() => { wheelLockedRef.current = false; }, 520);
+  };
+
   const phoneWidth = wide ? 350 : 318;
   const spread = wide ? 252 : 130;
 
   return (
-    <div className="relative mx-auto h-[690px] w-full max-w-[1040px] overflow-hidden sm:h-[760px]" aria-roledescription="carousel" aria-label={`${concept.name} app screens`}>
+    <div
+      className="relative mx-auto h-[690px] w-full max-w-[1040px] overflow-hidden outline-none sm:h-[760px]"
+      aria-roledescription="carousel"
+      aria-label={`${concept.name} app screens`}
+      tabIndex={0}
+      onWheel={handleWheel}
+      onKeyDown={(event) => {
+        if (event.key === 'ArrowLeft') go(-1);
+        if (event.key === 'ArrowRight') go(1);
+      }}
+    >
       <div className="absolute left-1/2 top-0 h-full w-[1100px] -translate-x-1/2 [perspective:1500px]">
         {slots.map((slot) => {
           const index = (screenIndex + slot + count) % count;
@@ -564,6 +599,9 @@ function PhoneCoverflow({ concept, locale, screenIndex, onChange }: { concept: M
                 opacity: slot === 0 ? 1 : 0.35,
                 filter: slot === 0 ? 'blur(0px) grayscale(0)' : 'blur(0.6px) grayscale(0.25)',
               }}
+              whileHover={slot === 0
+                ? { y: 0, scale: 1.012 }
+                : { y: 24, scale: 1, opacity: 0.62, filter: 'blur(0px) grayscale(0.05)' }}
               key={screen.id}
               role={slot === 0 ? undefined : 'button'}
               tabIndex={slot === 0 ? -1 : 0}
@@ -594,6 +632,25 @@ function PhoneCoverflow({ concept, locale, screenIndex, onChange }: { concept: M
           );
         })}
       </div>
+
+      <button
+        type="button"
+        aria-label="Previous screen"
+        title="Previous screen"
+        onClick={() => go(-1)}
+        className="absolute left-2 top-[43%] z-50 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/25 bg-black/70 text-white shadow-[0_10px_30px_rgba(0,0,0,.35)] backdrop-blur-md transition duration-200 hover:scale-110 hover:border-white hover:bg-white hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:left-[calc(50%-230px)]"
+      >
+        <ChevronLeft size={21} strokeWidth={1.8} />
+      </button>
+      <button
+        type="button"
+        aria-label="Next screen"
+        title="Next screen"
+        onClick={() => go(1)}
+        className="absolute right-2 top-[43%] z-50 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/25 bg-black/70 text-white shadow-[0_10px_30px_rgba(0,0,0,.35)] backdrop-blur-md transition duration-200 hover:scale-110 hover:border-white hover:bg-white hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:right-[calc(50%-230px)]"
+      >
+        <ChevronRight size={21} strokeWidth={1.8} />
+      </button>
 
       <div className="absolute bottom-2 left-1/2 z-40 flex -translate-x-1/2 gap-2">{concept.screens.map((screen, index) => <button key={screen.id} type="button" aria-label={`Go to ${tx(locale, screen.label)}`} onClick={() => onChange(index, index > screenIndex ? 1 : -1)} className={`h-1 outline-none transition-all ${index === screenIndex ? 'w-7 bg-white' : 'w-2 bg-white/25'}`} />)}</div>
     </div>
