@@ -8,6 +8,7 @@ import ShowcaseNav from '@/components/showcase/ShowcaseNav';
 import TemplateRow from '@/components/showcase/TemplateRow';
 import WigtnLogo from '@/components/showcase/WigtnLogo';
 import MobileConcepts from '@/components/showcase/MobileConcepts';
+import AssemblyFeature from '@/components/showcase/AssemblyFeature';
 
 const grotesk = Space_Grotesk({ subsets: ['latin'], display: 'swap' });
 
@@ -44,8 +45,8 @@ export default async function ShowcaseHome({
 
   const stats = [
     { n: templateCount, l: lang === 'ko' ? '웹' : 'Web' },
+    { n: '01', l: lang === 'ko' ? '인터랙티브' : 'Interactive' },
     { n: '06', l: lang === 'ko' ? '모바일' : 'Mobile' },
-    { n: '04', l: lang === 'ko' ? '개국어' : 'Languages' },
   ];
 
   return (
@@ -55,14 +56,14 @@ export default async function ShowcaseHome({
       {/* 컴팩트 인트로 — 큰 히어로 없이 바로 템플릿으로 */}
       <section id="templates" className="relative mx-auto max-w-6xl scroll-mt-16 px-5 pb-4 pt-28 sm:px-8 sm:pt-32">
         <div className="relative flex flex-col gap-6 border-b border-white/10 pb-8 md:flex-row md:items-end md:justify-between">
-          <div className="max-w-2xl">
+          <div className="max-w-3xl">
             <p className="text-xs tracking-[0.28em]" style={{ color: P265 }}>
               {copy.gallery.eyebrow}
             </p>
             <h1 className={`${grotesk.className} mt-4 text-[clamp(2rem,5vw,3.6rem)] font-medium leading-[1.02] tracking-tight`}>
               {copy.gallery.heading}
             </h1>
-            <p className="mt-4 max-w-xl text-sm leading-relaxed text-[#f2f1ef]/60 sm:text-base">
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-[#f2f1ef]/60 sm:text-base">
               {copy.hero.lead}
             </p>
           </div>
@@ -83,6 +84,8 @@ export default async function ShowcaseHome({
           <TemplateRow key={meta.slug} meta={meta} locale={loc} index={i} previewLabel={copy.gallery.preview} />
         ))}
       </div>
+
+      <AssemblyFeature copy={copy} locale={loc} />
 
       <MobileConcepts copy={copy} locale={loc} />
 

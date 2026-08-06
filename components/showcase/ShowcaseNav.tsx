@@ -91,9 +91,13 @@ export default function ShowcaseNav({
                 <span className="text-[#f2f1ef]">{copy.nav.web}</span>
                 <span className="text-[10px] text-white/30 transition-colors group-hover:text-[#9063CD]">01</span>
               </button>
+              <button type="button" role="menuitem" onClick={() => jump('interactive')} className="group flex w-full items-center justify-between border-t border-white/8 px-3 py-3 text-left transition-colors hover:bg-white/8 focus-visible:bg-white/8 focus-visible:outline-none">
+                <span className="text-[#f2f1ef]">{copy.nav.interactive}</span>
+                <span className="text-[10px] text-white/30 transition-colors group-hover:text-[#9063CD]">02</span>
+              </button>
               <button type="button" role="menuitem" onClick={() => jump('mobile')} className="group flex w-full items-center justify-between border-t border-white/8 px-3 py-3 text-left transition-colors hover:bg-white/8 focus-visible:bg-white/8 focus-visible:outline-none">
                 <span className="text-[#f2f1ef]">{copy.nav.mobile}</span>
-                <span className="text-[10px] text-white/30 transition-colors group-hover:text-[#9063CD]">02</span>
+                <span className="text-[10px] text-white/30 transition-colors group-hover:text-[#9063CD]">03</span>
               </button>
             </div>
           </div>
