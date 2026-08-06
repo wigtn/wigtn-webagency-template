@@ -73,14 +73,48 @@ function tx(locale: Locale, value: { ko: string; en: string }) {
   return pickMobileText(locale, value);
 }
 
-function StatusBar({ dark = false }: { dark?: boolean }) {
+function IosCellular({ color }: { color: string }) {
   return (
-    <div className={`flex h-11 items-end justify-between px-7 pb-2 text-[10px] font-semibold ${dark ? 'text-white' : 'text-black'}`}>
-      <span>9:41</span>
-      <span className="flex items-center gap-1.5" aria-hidden>
-        <span className={`h-2 w-3 rounded-sm border ${dark ? 'border-white' : 'border-black'}`} />
-        <span className={`h-2 w-2 rounded-full ${dark ? 'bg-white' : 'bg-black'}`} />
-        <span className={`h-2 w-4 rounded-[2px] ${dark ? 'bg-white' : 'bg-black'}`} />
+    <span className="flex h-[10px] items-end gap-[1.5px]" aria-hidden>
+      {[3, 5, 7, 9].map((height) => (
+        <span key={height} className="w-[2.5px] rounded-[1px]" style={{ height, backgroundColor: color }} />
+      ))}
+    </span>
+  );
+}
+
+function IosWifi({ color }: { color: string }) {
+  return (
+    <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden>
+      <path d="M1 3.25C4.52.2 9.48.2 13 3.25" stroke={color} strokeWidth="1.45" strokeLinecap="round" />
+      <path d="M3.35 5.65a5.55 5.55 0 0 1 7.3 0" stroke={color} strokeWidth="1.45" strokeLinecap="round" />
+      <path d="M5.72 8a1.95 1.95 0 0 1 2.56 0" stroke={color} strokeWidth="1.45" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function IosBattery({ color }: { color: string }) {
+  return (
+    <svg width="24" height="11" viewBox="0 0 24 11" fill="none" aria-hidden>
+      <rect x="0.6" y="0.6" width="20.8" height="9.8" rx="3" stroke={color} strokeOpacity="0.38" strokeWidth="1.2" />
+      <rect x="2.2" y="2.2" width="16.7" height="6.6" rx="1.7" fill={color} />
+      <path d="M22.7 3.55v3.9" stroke={color} strokeOpacity="0.42" strokeWidth="1.3" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function StatusBar({ dark = false }: { dark?: boolean }) {
+  const color = dark ? '#ffffff' : '#111111';
+  return (
+    <div
+      className="relative z-40 h-[50px] select-none"
+      style={{ color, fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif' }}
+    >
+      <span className="absolute left-[26px] top-[16px] text-[11px] font-semibold leading-none">9:41</span>
+      <span className="absolute right-[21px] top-[15px] flex h-[11px] items-center gap-[5px]">
+        <IosCellular color={color} />
+        <IosWifi color={color} />
+        <IosBattery color={color} />
       </span>
     </div>
   );
@@ -524,7 +558,7 @@ function AppScreen(props: ScreenProps) {
 function DeviceFrame({ concept, screen, locale, index }: { concept: MobileConcept; screen: MobileScreen; locale: Locale; index: number }) {
   return (
     <div className="relative h-full w-full overflow-hidden rounded-[46px] border-[9px] border-[#050506] bg-black shadow-[0_36px_90px_rgba(0,0,0,.62)]">
-      <span className="absolute left-1/2 top-3 z-50 h-7 w-24 -translate-x-1/2 rounded-full bg-black" aria-hidden />
+      <span className="absolute left-1/2 top-[8px] z-50 h-8 w-28 -translate-x-1/2 rounded-full bg-black shadow-[0_1px_2px_rgba(255,255,255,.04)]" aria-hidden />
       <div className="h-full overflow-hidden rounded-[35px]"><AppScreen concept={concept} screen={screen} locale={locale} index={index} /></div>
     </div>
   );
@@ -638,18 +672,18 @@ function PhoneCoverflow({ concept, locale, screenIndex, onChange }: { concept: M
         aria-label="Previous screen"
         title="Previous screen"
         onClick={() => go(-1)}
-        className="absolute left-2 top-[43%] z-50 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/25 bg-black/70 text-white shadow-[0_10px_30px_rgba(0,0,0,.35)] backdrop-blur-md transition duration-200 hover:scale-110 hover:border-white hover:bg-white hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:left-[calc(50%-230px)]"
+        className="group absolute left-2 top-[43%] z-50 grid h-9 w-9 -translate-y-1/2 place-items-center rounded-full border border-white/25 bg-black/65 text-white shadow-[0_10px_30px_rgba(0,0,0,.35)] backdrop-blur-md transition duration-200 hover:scale-110 hover:border-white hover:bg-white hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:left-5 sm:h-11 sm:w-11"
       >
-        <ChevronLeft size={21} strokeWidth={1.8} />
+        <ChevronLeft size={21} strokeWidth={1.8} className="transition-transform duration-200 group-hover:-translate-x-0.5" />
       </button>
       <button
         type="button"
         aria-label="Next screen"
         title="Next screen"
         onClick={() => go(1)}
-        className="absolute right-2 top-[43%] z-50 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/25 bg-black/70 text-white shadow-[0_10px_30px_rgba(0,0,0,.35)] backdrop-blur-md transition duration-200 hover:scale-110 hover:border-white hover:bg-white hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:right-[calc(50%-230px)]"
+        className="group absolute right-2 top-[43%] z-50 grid h-9 w-9 -translate-y-1/2 place-items-center rounded-full border border-white/25 bg-black/65 text-white shadow-[0_10px_30px_rgba(0,0,0,.35)] backdrop-blur-md transition duration-200 hover:scale-110 hover:border-white hover:bg-white hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:right-5 sm:h-11 sm:w-11"
       >
-        <ChevronRight size={21} strokeWidth={1.8} />
+        <ChevronRight size={21} strokeWidth={1.8} className="transition-transform duration-200 group-hover:translate-x-0.5" />
       </button>
 
       <div className="absolute bottom-2 left-1/2 z-40 flex -translate-x-1/2 gap-2">{concept.screens.map((screen, index) => <button key={screen.id} type="button" aria-label={`Go to ${tx(locale, screen.label)}`} onClick={() => onChange(index, index > screenIndex ? 1 : -1)} className={`h-1 outline-none transition-all ${index === screenIndex ? 'w-7 bg-white' : 'w-2 bg-white/25'}`} />)}</div>
@@ -696,9 +730,9 @@ export default function MobileConcepts({ copy, locale }: { copy: ShowcaseCopy; l
           </div>
         </div>
 
-        <div className="mt-9 grid gap-5 border-b border-white/10 pb-6 sm:grid-cols-[1fr_auto] sm:items-end">
+        <div className="mt-9 grid gap-3 border-b border-white/10 pb-5 sm:grid-cols-[1fr_auto] sm:items-end sm:gap-5 sm:pb-6">
           <div><p className="text-[10px] font-semibold" style={{ color: active.palette.accent }}>{tx(locale, active.category)} / {active.screens[screenIndex].platform} · CONCEPT UI · {locale === 'ko' ? '가상 데이터' : 'FICTIONAL DATA'}</p><h3 className="mt-2 text-3xl font-semibold text-white sm:text-4xl">{active.name}</h3></div>
-          <div className="max-w-lg sm:text-right"><p className="text-[12px] leading-relaxed text-white/52">{tx(locale, active.positioning)}</p><p className="mt-2 text-[10px] text-white/30">0{screenIndex + 1} / 0{active.screens.length} · {tx(locale, active.screens[screenIndex].label)}</p></div>
+          <div className="flex justify-end sm:block sm:max-w-lg sm:text-right"><p className="hidden text-[12px] leading-relaxed text-white/52 sm:block">{tx(locale, active.positioning)}</p><p className="text-[10px] text-white/30 sm:mt-2">0{screenIndex + 1} / 0{active.screens.length} · {tx(locale, active.screens[screenIndex].label)}</p></div>
         </div>
 
         <PhoneCoverflow concept={active} locale={locale} screenIndex={screenIndex} onChange={(next) => setScreenIndex(next)} />

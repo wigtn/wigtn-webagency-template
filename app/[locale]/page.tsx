@@ -43,7 +43,7 @@ export default async function ShowcaseHome({
   const templateCount = String(TEMPLATES.length).padStart(2, '0');
 
   const stats = [
-    { n: templateCount, l: lang === 'ko' ? '템플릿' : 'Templates' },
+    { n: templateCount, l: lang === 'ko' ? '웹' : 'Web' },
     { n: '06', l: lang === 'ko' ? '모바일' : 'Mobile' },
     { n: '04', l: lang === 'ko' ? '개국어' : 'Languages' },
   ];
@@ -57,7 +57,7 @@ export default async function ShowcaseHome({
         <div className="relative flex flex-col gap-6 border-b border-white/10 pb-8 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
             <p className="text-xs tracking-[0.28em]" style={{ color: P265 }}>
-              {copy.hero.kicker}
+              {copy.gallery.eyebrow}
             </p>
             <h1 className={`${grotesk.className} mt-4 text-[clamp(2rem,5vw,3.6rem)] font-medium leading-[1.02] tracking-tight`}>
               {copy.gallery.heading}
