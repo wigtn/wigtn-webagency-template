@@ -26,6 +26,15 @@
     "paths": {
       "@/*": [
         "./*"
+      ],
+      "@wigtn/auth-membership": [
+        "./packages/auth-membership/src/index.ts"
+      ],
+      "@wigtn/content-engine": [
+        "./packages/content-engine/src/index.ts"
+      ],
+      "@wigtn/backoffice-frame": [
+        "./packages/backoffice-frame/src/index.ts"
       ]
     }
   },
@@ -37,6 +46,7 @@
     ".next/dev/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "packages/**/*.test.ts"
   ]
 }
